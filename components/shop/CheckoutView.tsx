@@ -4,43 +4,54 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useCart, formatPrice } from '@/components/providers/CartProvider';
+import { orders, promos, ApiError } from '@/lib/api';
 
 type Status = 'idle' | 'processing' | 'done';
 
 const SHIPPING = 12; // Flat cold-chain dispatch fee (GBP).
-
-// Promo codes → fractional discount applied to the subtotal.
-const PROMOS: Record<string, number> = {
-  VORA10: 0.1,
-};
 
 export default function CheckoutView() {
   const { items, subtotal, count, clear } = useCart();
   const router = useRouter();
   const [status, setStatus] = useState<Status>('idle');
   const [orderRef, setOrderRef] = useState('');
+  const [submitError, setSubmitError] = useState('');
 
-  // Promo code
+  // Promo code — now resolved against the microservice.
   const [promoInput, setPromoInput] = useState('');
-  const [appliedPromo, setAppliedPromo] = useState<string | null>(null);
+  const [appliedPromo, setAppliedPromo] = useState<{
+    code: string;
+    percent: number;
+  } | null>(null);
   const [promoError, setPromoError] = useState('');
+  const [promoValidating, setPromoValidating] = useState(false);
 
   const discount = appliedPromo
-    ? Math.round(subtotal * PROMOS[appliedPromo])
+    ? Math.round(subtotal * (appliedPromo.percent / 100))
     : 0;
   const total = Math.max(0, subtotal + (count > 0 ? SHIPPING : 0) - discount);
 
-  const applyPromo = () => {
+  const applyPromo = async () => {
     const code = promoInput.trim().toUpperCase();
-    if (!code) return;
-    if (PROMOS[code] != null) {
-      setAppliedPromo(code);
-      setPromoError('');
-    } else {
+    if (!code || promoValidating) return;
+    setPromoValidating(true);
+    setPromoError('');
+    try {
+      const res = await promos.validate(code);
+      setAppliedPromo({ code, percent: res.percent });
+    } catch (err) {
       setAppliedPromo(null);
-      setPromoError('That code isn’t valid.');
+      const msg =
+        err instanceof ApiError && err.status === 404
+          ? "That code isn’t valid."
+          : err instanceof Error
+            ? err.message
+            : 'Could not validate code.';
+      setPromoError(msg);
+    } finally {
+      setPromoValidating(false);
     }
   };
 
@@ -50,79 +61,59 @@ export default function CheckoutView() {
     setPromoError('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (count === 0 || status === 'processing') return;
-    setStatus('processing');
 
-    // Placeholder order flow — simulates a payment/order API call.
-    // Replace with a real checkout integration (Stripe, etc.) when available.
-    setTimeout(() => {
-      const ref =
-        'LMX-' +
-        Array.from({ length: 6 }, (_, i) =>
-          '0123456789ABCDEFGHJKMNPQRSTUVWXYZ'.charAt(
-            (total + count + i * 7 + items.length * 13) % 33
-          )
-        ).join('');
-      setOrderRef(ref);
+    const fd = new FormData(e.currentTarget);
+    const email = String(fd.get('email') ?? '').trim();
+    if (!email.includes('@')) {
+      setSubmitError('Please enter a valid email address.');
+      return;
+    }
+
+    setStatus('processing');
+    setSubmitError('');
+
+    try {
+      const res = await orders.create({
+        email,
+        firstName: String(fd.get('firstName') ?? '').trim(),
+        lastName: String(fd.get('lastName') ?? '').trim(),
+        phone: String(fd.get('mobile') ?? '').trim(),
+        address: [fd.get('line1'), fd.get('line2')]
+          .filter(Boolean)
+          .join(', '),
+        city: String(fd.get('city') ?? '').trim(),
+        postcode: String(fd.get('postcode') ?? '').trim(),
+        country: String(fd.get('country') ?? '').trim(),
+        subtotal,
+        total,
+        discountAmount: discount,
+        promoCode: appliedPromo?.code,
+        promoDiscount: appliedPromo?.percent,
+        itemsArray: items.map((i) => ({
+          name: i.name,
+          quantity: i.qty,
+          unitPrice: i.price,
+          productId: i.id,
+          sku: i.id,
+        })),
+        payment_method: 'manual',
+      });
+      setOrderRef(res.orderNumber);
       setStatus('done');
-      clear();
-    }, 1600);
+    } catch (err) {
+      setStatus('idle');
+      setSubmitError(
+        err instanceof Error
+          ? err.message
+          : 'Something went wrong placing your order. Please try again.'
+      );
+    }
   };
 
-  // Order confirmation (placeholder success state).
-  if (status === 'done') {
-    return (
-      <div className="container-wide flex min-h-[70vh] flex-col items-center justify-center py-24 text-center">
-        <motion.div
-          initial={{ scale: 0.6, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/15 text-gold"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            className="h-9 w-9"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-          >
-            <path d="m5 13 4 4L19 7" />
-          </svg>
-        </motion.div>
-        <h1 className="mt-8 text-display font-extralight tracking-tightest text-charcoal">
-          Order received
-        </h1>
-        <p className="mt-5 max-w-md text-base font-light leading-relaxed text-charcoal/60">
-          Thank you. This is a placeholder confirmation — no payment has been
-          taken. Your reference is{' '}
-          <span className="font-medium text-charcoal">{orderRef}</span>. A member
-          of the Lumivex team would normally follow up with documentation and
-          cold-chain dispatch details.
-        </p>
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/#products"
-            className="rounded-full bg-charcoal px-8 py-4 text-sm font-medium text-ivory transition-colors duration-500 hover:bg-gold"
-          >
-            Continue shopping
-          </Link>
-          <Link
-            href="/"
-            className="rounded-full border border-charcoal/15 px-8 py-4 text-sm font-medium text-charcoal transition-colors duration-500 hover:border-charcoal/40"
-          >
-            Back to home
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  if (count === 0) {
+  if (count === 0 && status !== 'done') {
     return (
       <div className="container-wide flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
         <h1 className="text-section font-extralight tracking-tightest text-charcoal">
@@ -142,7 +133,8 @@ export default function CheckoutView() {
   }
 
   return (
-    <div className="container-wide py-10 md:py-16">
+    <>
+      <div className="container-wide py-10 md:py-16">
       <div className="mb-10">
         <button
           onClick={() => router.push('/cart')}
@@ -205,30 +197,6 @@ export default function CheckoutView() {
             />
           </Fieldset>
 
-          <Fieldset title="Payment">
-            <div className="mb-2 flex items-center gap-2 rounded-[4px] bg-cream px-4 py-3 text-[12px] font-light text-charcoal/55 sm:col-span-2">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-4 w-4 shrink-0 text-gold"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                aria-hidden
-              >
-                <rect x="5" y="11" width="14" height="9" rx="1.5" />
-                <path d="M8 11V8a4 4 0 0 1 8 0v3" />
-              </svg>
-              Placeholder payment — no card is charged in this demo.
-            </div>
-            <Field
-              label="Card number"
-              name="card"
-              placeholder="4242 4242 4242 4242"
-              full
-            />
-            <Field label="Expiry" name="expiry" placeholder="MM / YY" />
-            <Field label="CVC" name="cvc" placeholder="123" />
-          </Fieldset>
         </div>
 
         {/* Summary */}
@@ -280,7 +248,7 @@ export default function CheckoutView() {
                     >
                       <path d="m5 13 4 4L19 7" />
                     </svg>
-                    {appliedPromo} applied
+                    {appliedPromo.code} applied · {appliedPromo.percent}% off
                   </span>
                   <button
                     type="button"
@@ -312,9 +280,10 @@ export default function CheckoutView() {
                     <button
                       type="button"
                       onClick={applyPromo}
-                      className="shrink-0 rounded-[4px] border border-charcoal/20 px-5 text-[13px] font-medium text-charcoal transition-colors hover:border-charcoal/50"
+                      disabled={promoValidating}
+                      className="shrink-0 rounded-[4px] border border-charcoal/20 px-5 text-[13px] font-medium text-charcoal transition-colors hover:border-charcoal/50 disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      Apply
+                      {promoValidating ? 'Checking…' : 'Apply'}
                     </button>
                   </div>
                   {promoError && (
@@ -341,7 +310,7 @@ export default function CheckoutView() {
               </div>
               {discount > 0 && (
                 <div className="flex justify-between text-sm font-light text-gold">
-                  <span>Discount ({appliedPromo})</span>
+                  <span>Discount ({appliedPromo?.code})</span>
                   <span className="font-medium">−{formatPrice(discount)}</span>
                 </div>
               )}
@@ -354,6 +323,12 @@ export default function CheckoutView() {
                 </span>
               </div>
             </div>
+
+            {submitError && (
+              <p className="mt-5 rounded-[4px] border border-red-600/20 bg-red-600/5 px-4 py-3 text-[13px] font-light text-red-600/90">
+                {submitError}
+              </p>
+            )}
 
             <button
               type="submit"
@@ -372,13 +347,110 @@ export default function CheckoutView() {
             </button>
 
             <p className="mt-5 text-center text-[12px] font-light text-charcoal/45">
-              By placing this order you confirm the compounds are for laboratory
-              research use only.
+              Payment by bank transfer. We’ll email you secure payment
+              instructions and a capture link for your screenshot.
             </p>
           </div>
         </div>
       </form>
-    </div>
+      </div>
+
+      {/* Order-placed popup */}
+      <AnimatePresence>
+        {status === 'done' && (
+          <motion.div
+            className="fixed inset-0 z-[80] flex items-center justify-center p-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="order-placed-title"
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-charcoal/45 backdrop-blur-sm" />
+
+            {/* Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: 10 }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              className="relative w-full max-w-md overflow-hidden rounded-[14px] bg-ivory p-8 text-center shadow-[0_40px_120px_-30px_rgba(28,26,23,0.6)] md:p-10"
+            >
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.15, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold/15 text-gold"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-8 w-8"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden
+                >
+                  <path d="m5 13 4 4L19 7" />
+                </svg>
+              </motion.div>
+
+              <h2
+                id="order-placed-title"
+                className="mt-6 text-3xl font-extralight tracking-tightest text-charcoal"
+              >
+                Order placed
+              </h2>
+              <p className="mt-3 text-sm font-light leading-relaxed text-charcoal/60">
+                Thank you. Check your inbox — we’ve sent payment instructions
+                and a secure capture link for you to upload your bank-transfer
+                screenshot.
+              </p>
+
+              <div className="mt-6 flex items-center justify-between gap-4 rounded-[8px] bg-cream px-5 py-4 text-left">
+                <div>
+                  <p className="text-[10px] uppercase tracking-wider text-charcoal/40">
+                    Order reference
+                  </p>
+                  <p className="mt-0.5 font-medium tracking-wide text-charcoal">
+                    {orderRef}
+                  </p>
+                </div>
+                <div className="text-right">
+                  <p className="text-[10px] uppercase tracking-wider text-charcoal/40">
+                    Total
+                  </p>
+                  <p className="mt-0.5 text-lg font-light text-charcoal">
+                    {formatPrice(total)}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/#products"
+                  onClick={() => clear()}
+                  className="flex-1 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-ivory transition-colors duration-500 hover:bg-gold"
+                >
+                  Continue shopping
+                </Link>
+                <Link
+                  href="/"
+                  onClick={() => clear()}
+                  className="flex-1 rounded-full border border-charcoal/15 px-6 py-3.5 text-sm font-medium text-charcoal transition-colors duration-500 hover:border-charcoal/40"
+                >
+                  Back to home
+                </Link>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 

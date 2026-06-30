@@ -7,11 +7,13 @@ import { scrollToSection } from '@/lib/lenis';
 import Magnetic from '@/components/ui/Magnetic';
 import Logo from '@/components/ui/Logo';
 import CartButton from '@/components/cart/CartButton';
+import { useAuth } from '@/components/providers/AuthProvider';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState('#home');
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -78,6 +80,14 @@ export default function Navigation() {
           </ul>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              href={user ? '/account/wallet' : '/login'}
+              className={`link-underline text-[13px] font-medium tracking-wide transition-colors duration-500 ${
+                scrolled ? 'text-charcoal/80 hover:text-charcoal' : 'text-ivory/80 hover:text-ivory'
+              }`}
+            >
+              {user ? 'Account' : 'Sign in'}
+            </Link>
             <CartButton dark={scrolled} />
             <Magnetic strength={0.4} className="inline-block">
               <button

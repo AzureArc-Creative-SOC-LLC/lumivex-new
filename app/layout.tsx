@@ -2,9 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import SmoothScroll from '@/components/providers/SmoothScroll';
 import CartProvider from '@/components/providers/CartProvider';
+import AuthProvider from '@/components/providers/AuthProvider';
 import Cursor from '@/components/ui/Cursor';
+import ChatWidget from '@/components/ui/ChatWidget';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lumivex.store'),
   title: 'Lumivex — Premium Research Compounds | UK & EU R&D Supplier',
   description:
     'Lumivex supplies leading laboratories with high-purity, batch-tested research peptides and compounds — manufactured in-house with full traceability. Research use only.',
@@ -41,6 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link
+          rel="preconnect"
+          href="https://cdn.fontshare.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600&display=swap"
           rel="stylesheet"
@@ -48,9 +57,12 @@ export default function RootLayout({
       </head>
       <body>
         <Cursor />
-        <CartProvider>
-          <SmoothScroll>{children}</SmoothScroll>
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <SmoothScroll>{children}</SmoothScroll>
+            <ChatWidget />
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

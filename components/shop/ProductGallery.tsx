@@ -37,6 +37,7 @@ export default function ProductGallery({
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
           priority
+          quality={90}
           className="animate-[fadeIn_0.4s_ease] object-contain p-8"
         />
       </div>

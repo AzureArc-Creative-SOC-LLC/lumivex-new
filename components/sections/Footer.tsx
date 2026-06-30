@@ -4,6 +4,7 @@ import { FOOTER_LINKS } from '@/lib/data';
 import { scrollToSection } from '@/lib/lenis';
 import RevealText from '@/components/animations/RevealText';
 import FadeIn from '@/components/animations/FadeIn';
+import Newsletter from '@/components/sections/Newsletter';
 
 export default function Footer() {
   return (
@@ -27,6 +28,20 @@ export default function Footer() {
                 Lumivex has never operated on any social media platforms. Our
                 official site is lumivex.store — please beware of scam sites.
               </p>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="mt-10 max-w-sm rounded-[6px] bg-ivory p-5 text-charcoal">
+                <p className="text-[11px] uppercase tracking-eyebrow text-charcoal/45">
+                  Newsletter
+                </p>
+                <p className="mt-1 text-[13px] font-light text-charcoal/65">
+                  Subscribe for research compound updates and giveaway entries.
+                </p>
+                <div className="mt-4">
+                  <Newsletter />
+                </div>
+              </div>
             </FadeIn>
           </div>
 

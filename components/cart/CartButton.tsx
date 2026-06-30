@@ -1,19 +1,23 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useCart } from '@/components/providers/CartProvider';
 
 /**
- * Cart icon + live item count. Links to the cart page and gives a brief
- * "pop" when an item is added so the action feels acknowledged.
+ * Cart icon with a live item-count badge. Clicking it navigates to /cart —
+ * the badge briefly pops when an item is added so the action is acknowledged.
  */
 export default function CartButton({ dark = false }: { dark?: boolean }) {
   const { count, lastAdded } = useCart();
   const [pop, setPop] = useState(false);
+  const firstRun = useRef(true);
 
   useEffect(() => {
-    if (lastAdded === 0) return;
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
     setPop(true);
     const t = setTimeout(() => setPop(false), 450);
     return () => clearTimeout(t);

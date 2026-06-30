@@ -29,6 +29,8 @@ type Props = {
   oversize?: number;
   /** Baseline scale held during drift (helps cover edges for 'cover' fit). */
   baseScale?: number;
+  /** Optimized-image quality (1–100). Higher keeps editorial visuals crisp. */
+  quality?: number;
 };
 
 export default function CurtainImage({
@@ -45,6 +47,7 @@ export default function CurtainImage({
   objectFit = 'cover',
   oversize = 14,
   baseScale = 1.06,
+  quality = 86,
 }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -144,6 +147,7 @@ export default function CurtainImage({
           fill
           sizes={sizes}
           priority={priority}
+          quality={quality}
           className={`${objectFit === 'contain' ? 'object-contain' : 'object-cover'} ${imgClassName}`}
         />
       </div>

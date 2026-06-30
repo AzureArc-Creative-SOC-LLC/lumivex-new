@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,6 +14,19 @@ export default function Hero() {
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
+
+  // Only load the (heavy) background video where it adds value: larger
+  // screens, motion allowed, and not on a data-saver connection. Mobile and
+  // reduced-motion users get the optimized poster image instead.
+  useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const wide = window.matchMedia('(min-width: 768px)').matches;
+    const saveData = (
+      navigator as Navigator & { connection?: { saveData?: boolean } }
+    ).connection?.saveData;
+    if (wide && !reduced && !saveData) setShowVideo(true);
+  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -112,20 +125,23 @@ export default function Hero() {
           alt="Lumivex research laboratory"
           fill
           priority
+          quality={85}
           sizes="100vw"
           className="object-cover"
         />
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={img(IMAGES.hero, 2000)}
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+        {showVideo && (
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster={img(IMAGES.hero, 2000)}
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/55 via-charcoal/35 to-charcoal/70" />
         <div className="absolute inset-0 bg-charcoal/25" />
       </div>
