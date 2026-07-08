@@ -17,6 +17,9 @@ export default function CheckoutView() {
   const router = useRouter();
   const [status, setStatus] = useState<Status>('idle');
   const [orderRef, setOrderRef] = useState('');
+  // Snapshot of the total at time of order, so the success popup keeps
+  // showing the right amount after we clear the cart.
+  const [orderTotal, setOrderTotal] = useState(0);
   const [submitError, setSubmitError] = useState('');
 
   // Promo code — now resolved against the microservice.
@@ -90,19 +93,21 @@ export default function CheckoutView() {
         subtotal,
         total,
         discountAmount: discount,
-        promoCode: appliedPromo?.code,
+        promoCode: appliedPromo?.code ?? null,
         promoDiscount: appliedPromo?.percent,
         itemsArray: items.map((i) => ({
           name: i.name,
           quantity: i.qty,
           unitPrice: i.price,
           productId: i.id,
-          sku: i.id,
+          sku: i.slug || i.id,
         })),
         payment_method: 'manual',
       });
       setOrderRef(res.orderNumber);
+      setOrderTotal(total);
       setStatus('done');
+      clear();
     } catch (err) {
       setStatus('idle');
       setSubmitError(
@@ -425,7 +430,7 @@ export default function CheckoutView() {
                     Total
                   </p>
                   <p className="mt-0.5 text-lg font-light text-charcoal">
-                    {formatPrice(total)}
+                    {formatPrice(orderTotal)}
                   </p>
                 </div>
               </div>
@@ -433,14 +438,12 @@ export default function CheckoutView() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/#products"
-                  onClick={() => clear()}
                   className="flex-1 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-ivory transition-colors duration-500 hover:bg-gold"
                 >
                   Continue shopping
                 </Link>
                 <Link
                   href="/"
-                  onClick={() => clear()}
                   className="flex-1 rounded-full border border-charcoal/15 px-6 py-3.5 text-sm font-medium text-charcoal transition-colors duration-500 hover:border-charcoal/40"
                 >
                   Back to home

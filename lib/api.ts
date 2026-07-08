@@ -134,7 +134,7 @@ export type CreateOrderInput = {
   subtotal: number;
   total: number;
   discountAmount?: number;
-  promoCode?: string;
+  promoCode?: string | null;
   promoDiscount?: number;
   itemsArray: OrderItemInput[];
   payment_method?: 'manual' | 'klyme' | 'aabanpay';
