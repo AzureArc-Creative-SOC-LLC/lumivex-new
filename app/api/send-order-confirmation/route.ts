@@ -1,7 +1,7 @@
 import { sendOrderConfirmationEmail } from '../../../../../shared-email/order-email.js';
 // On the VPS, this site is deployed one level deeper than the site name
-// (/var/www/lumivex/app/ is the project root, not /var/www/lumivex/), so this
-// needs 5 dirs back to reach /var/www/shared-email/, not the usual 4.
+// (/var/www/lumivexlabs/app/ is the project root, not /var/www/lumivexlabs/),
+// so this needs 5 dirs back to reach /var/www/shared-email/, not the usual 4.
 // NOTE: this makes local builds fail (no shared-email/ one level above
 // Dev/frontend/) — intentional, VPS-only fix; see vora's route.js for context.
 
