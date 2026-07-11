@@ -9,9 +9,10 @@ const nextConfig = {
   turbopack: {
     // Turbopack only resolves modules inside its detected root (this
     // project's package-lock.json). The send-order-confirmation API route
-    // imports ../../../../shared-email/order-email.js, which lives
-    // outside that root, so widen it to the common Dev/frontend ancestor.
-    root: path.join(__dirname, '..'),
+    // imports ../../../../../shared-email/order-email.js, which lives
+    // outside that root, so widen it to the common /var/www/ ancestor
+    // (2 up: past /var/www/lumivexlabs/app/ and /var/www/lumivexlabs/).
+    root: path.join(__dirname, '../..'),
   },
   // Trim production bundles by dropping console.* (keeps warnings/errors)
   compiler: {
