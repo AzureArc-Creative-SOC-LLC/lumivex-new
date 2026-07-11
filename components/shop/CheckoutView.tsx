@@ -104,6 +104,53 @@ export default function CheckoutView() {
         })),
         payment_method: 'manual',
       });
+      // Fire the shared-email order confirmation using the order the backend
+      // actually persisted — not the raw form fields — so the email always
+      // reflects what was saved. Best-effort: never blocks the checkout flow.
+      void (async () => {
+        try {
+          const { order, items: orderItems } = await orders.byNumber(res.orderNumber);
+          const o = order as Record<string, unknown>;
+          await fetch('/api/send-order-confirmation', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              customer: {
+                name: String(o.customer_name ?? ''),
+                email: String(o.customer_email ?? email),
+              },
+              order: {
+                orderNumber: String(o.order_number ?? res.orderNumber),
+                currency: String(o.currency ?? 'GBP'),
+                items: orderItems.map((it) => {
+                  const row = it as Record<string, unknown>;
+                  return {
+                    name: String(row.name ?? ''),
+                    quantity: Number(row.quantity ?? 1),
+                    price: Number(row.unit_price ?? 0),
+                  };
+                }),
+                subtotal: Number(o.subtotal ?? subtotal),
+                shipping: count > 0 ? SHIPPING : 0,
+                tax: 0,
+                discount: Number(o.discount_amount ?? discount),
+                total: Number(o.total ?? total),
+                shippingAddress: [
+                  o.shipping_address,
+                  o.shipping_city,
+                  o.shipping_zip ?? o.shipping_postcode,
+                  o.shipping_country,
+                ]
+                  .filter(Boolean)
+                  .join(', '),
+              },
+            }),
+          });
+        } catch (err) {
+          console.error('[checkout] order confirmation email failed:', err);
+        }
+      })();
+
       setOrderRef(res.orderNumber);
       setOrderTotal(total);
       setStatus('done');
