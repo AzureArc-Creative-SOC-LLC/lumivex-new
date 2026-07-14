@@ -123,9 +123,13 @@
   }
 }
 
-/* Prevent flash of unstyled split text */
+/* Prevent flash of unstyled split text. SplitType stamps `text-align: center`
+   onto the line wrappers it generates, which re-centres every line inside the
+   widest one — a left-aligned heading ends up with its short lines indented.
+   Inheriting instead keeps each line on its heading's own alignment. */
 .split-line {
   overflow: hidden;
+  text-align: inherit;
 }
 
 /* Balanced wrapping keeps large headings from leaving orphan words, and

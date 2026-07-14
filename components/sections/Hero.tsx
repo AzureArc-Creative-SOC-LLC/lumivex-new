@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
@@ -53,17 +54,22 @@ export default function Hero() {
           '-=0.9'
         );
 
-        // Scroll: the hero image drifts upward far slower than the page
-        // (premium floating effect) plus a subtle scale. Drift is richer on
-        // desktop and gentler on smaller screens. Linear ease + scrub.
+        // Scroll: the hero image lags behind the page (premium floating
+        // effect) plus a subtle scale. The image starts flush with the
+        // viewport — all drift headroom comes from the scale, never from an
+        // initial offset, so the subject is never cropped at rest.
+        //
+        // Invariant: scale grows the box by 50 * (scale - 1) on each edge,
+        // so `50 * (scaleEnd - 1) >= yEnd` keeps the top edge covered for the
+        // whole scrub. Drift is richer on desktop, gentler on small screens.
         const vw = window.innerWidth;
         const factor = vw < 640 ? 0.55 : vw < 1024 ? 0.78 : 1;
         gsap.fromTo(
           image,
-          { yPercent: -12 * factor, scale: 1.06 },
+          { yPercent: 0, scale: 1 },
           {
-            yPercent: 15 * factor,
-            scale: 1.14,
+            yPercent: 8 * factor,
+            scale: 1 + 0.2 * factor,
             ease: 'none',
             scrollTrigger: {
               trigger: section,
@@ -98,30 +104,50 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex h-[100svh] min-h-[640px] items-center justify-center overflow-hidden"
     >
-      {/* Background — medical-research video, taller than the viewport so it
-          can drift without exposing an edge during parallax */}
+      {/* Background — the subject fills nearly the full height of the source
+          frame, so the box sits flush with the viewport and the crop is
+          anchored high: any overflow is taken from the floor at the bottom
+          (hidden behind the CTAs and gradient) rather than the pen and face. */}
       <div
         ref={imageRef}
-        className="absolute inset-x-0 -top-[22%] h-[144%] will-change-transform"
+        className="absolute inset-0 will-change-transform"
       >
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/55 via-charcoal/35 to-charcoal/70" />
-        <div className="absolute inset-0 bg-charcoal/25" />
+        <Image
+          src="/images/hero-seo-new.webp"
+          alt="Lumivex Labs research laboratory"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_15%]"
+        />
       </div>
+
+      {/* Legibility wash — a sibling of the parallax box, not a child, so it
+          stays pinned while the image drifts and scales beneath it. Weighted
+          to the left, where the copy sits over the near-white table top, and
+          fading out before the subject on the right. Narrow screens crop in
+          toward her, so the copy needs cover across the full width there.
+
+          Olive-gold rather than neutral black: it shares the ~37deg hue of the
+          gold token, so the shade reads as part of the shot's warmth. It is
+          taken well below the token's lightness though — ivory on gold itself
+          is only 2.5:1, while this holds ~10:1. Stops end on a matching hue at
+          /0, not `transparent` (= transparent black), which fades through grey. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#332E18]/75 via-[#4A4226]/38 to-[#4A4226]/0 md:from-[#332E18]/72 md:via-[#3E3820]/34 md:to-[#4A4226]/0"
+      />
+
+      {/* Gold edge vignette, echoing the framing of the reference art */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-[16%] bg-gradient-to-l from-gold/32 to-gold/0 md:block"
+      />
 
       {/* Content */}
       <div
         ref={contentRef}
-        className="container-wide relative z-10 flex flex-col items-center text-center will-change-transform"
+        className="container-wide relative z-10 flex flex-col items-start text-left will-change-transform"
       >
         <span
           data-hero-fade
@@ -160,7 +186,7 @@ export default function Hero() {
           <button
             data-touch-target
             onClick={() => scrollToSection('#about')}
-            className="link-underline mx-auto rounded-full px-4 py-4 text-sm font-medium text-ivory/90 sm:mx-0"
+            className="link-underline rounded-full px-4 py-4 text-sm font-medium text-ivory/90"
           >
             About Lumivex
           </button>

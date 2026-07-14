@@ -1,0 +1,32 @@
+[     131ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     242ms] [LOG] [Fast Refresh] done in 227ms @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     425ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     449ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     551ms] [WARNING] Image with src "/images/inhouse-img1-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     554ms] [WARNING] Image with src "/images/inhouse-img2-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     556ms] [WARNING] Image with src "/images/inhouse-img3-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     559ms] [WARNING] Image with src "/images/inhouse-img4-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     564ms] [WARNING] Image with src "/images/about-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     581ms] [WARNING] Image with src "/products/tirzepatide.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     583ms] [WARNING] Image with src "/products/retatrutide-20.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     586ms] [WARNING] Image with src "/products/retatrutide-40.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     588ms] [WARNING] Image with src "/products/glow.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     590ms] [WARNING] Image with src "/products/bpc.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     593ms] [WARNING] Image with src "/products/nad.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   72145ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   72237ms] [LOG] [Fast Refresh] done in 86ms @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  106727ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  106893ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  111200ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  111319ms] [LOG] [Fast Refresh] done in 231ms @ http://localhost:4100/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

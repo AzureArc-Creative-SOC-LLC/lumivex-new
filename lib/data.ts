@@ -5,16 +5,16 @@ export const img = (src: string, w = 1600) =>
     : `https://images.unsplash.com/photo-${src}?q=80&w=${w}&auto=format&fit=crop`;
 
 export const IMAGES = {
-  hero: '/images/hero.jpg',
-  collage1: '/images/about3.jpeg',
-  collage2: '/images/about1.avif',
-  collage3: '/images/about2.jpeg',
-  collage4: '/images/about4new-img.jpeg',
-  aboutPortrait: '/images/about5.avif',
-  aboutSecondary: '/images/collage2.jpg',
-  whyus: '/images/whyus.jpg',
-  contact: '/images/hero.jpg',
-  texture: '/images/collage3.jpg',
+  hero: '/images/hero-seo-new.webp',
+  collage1: '/images/inhouse-image1-seo.webp',
+  collage2: '/images/inhouse-image2-seo.webp',
+  collage3: '/images/inhouse-img3-seo.webp',
+  collage4: '/images/inhouse-img4-seo.webp',
+  aboutPortrait: '/images/about-seo.webp',
+  aboutSecondary: '/images/inhouse-image2-seo.webp',
+  whyus: '/images/whyus11-seo.webp',
+  contact: '/images/hero-seo-new.webp',
+  texture: '/images/inhouse-img3-seo.webp',
 };
 
 export const ANNOUNCEMENTS = [
@@ -318,21 +318,21 @@ export const TESTIMONIALS = [
       'Lumivex has eliminated the uncertainty of unverified vendors. The batch documentation and purity data are the most rigorous we have sourced in the UK.',
     author: 'Dr. Helena Voss',
     role: 'Principal Investigator, Zürich',
-    image: '/testimonials/helena.jpg',
+    image: '/images/testimonial1.webp',
   },
   {
     quote:
       'Full traceability, ISO clean-room synthesis, and reliable cold-chain dispatch. This is what a compliant R&D supply chain should look like.',
     author: 'Marcus Lindgren',
     role: 'Laboratory Director, Stockholm',
-    image: '/testimonials/marcus.jpg',
+    image: '/images/testimonial2.webp',
   },
   {
     quote:
       'The consistency across batches is extraordinary. Lumivex has become the only research-grade source our protocol trusts.',
     author: 'Dr. Amara Okafor',
     role: 'Research Lead, London',
-    image: '/testimonials/amara.jpg',
+    image: '/images/testimonial-3.webp',
   },
 ];
 

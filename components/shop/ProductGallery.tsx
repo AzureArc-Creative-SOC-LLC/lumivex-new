@@ -8,9 +8,9 @@ import Image from 'next/image';
  * Swap these for real product angles/packaging photos when available.
  */
 const CONTEXT_SHOTS = [
-  '/images/collage1.jpg',
-  '/images/collage2.jpg',
-  '/images/whyus.jpg',
+  '/images/inhouse-image1-seo.webp',
+  '/images/inhouse-image2-seo.webp',
+  '/images/whyus1-seo.webp',
 ];
 
 export default function ProductGallery({

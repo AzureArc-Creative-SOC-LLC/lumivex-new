@@ -148,7 +148,7 @@ export default function WhyUs() {
               className="absolute left-1/2 top-1/2 h-[310px] w-[310px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full shadow-[0_30px_60px_-30px_rgba(28,26,23,0.4)] sm:h-[370px] sm:w-[370px] lg:h-[420px] lg:w-[420px]"
             >
               <Image
-                src="/images/whuus-1.avif"
+                src="/images/whyus11-seo.webp"
                 alt="Lumivex research scientist"
                 fill
                 sizes="320px"
@@ -163,7 +163,7 @@ export default function WhyUs() {
               className="absolute right-[2%] top-[3%] h-[140px] w-[140px] overflow-hidden rounded-full ring-[6px] ring-cream shadow-[0_20px_40px_-24px_rgba(28,26,23,0.5)] sm:h-[175px] sm:w-[175px]"
             >
               <Image
-                src="/images/whyus2.jpeg"
+                src="/images/whyus2-seo.webp"
                 alt="Lumivex research laboratory team"
                 fill
                 sizes="140px"
@@ -178,7 +178,7 @@ export default function WhyUs() {
               className="absolute bottom-[2%] left-[2%] h-[118px] w-[118px] overflow-hidden rounded-full ring-[6px] ring-cream shadow-[0_20px_40px_-24px_rgba(28,26,23,0.5)] sm:h-[150px] sm:w-[150px]"
             >
               <Image
-                src="/images/whyus3.jpeg"
+                src="/images/whyus3new-seo.webp"
                 alt="Laboratory glassware"
                 fill
                 sizes="120px"
