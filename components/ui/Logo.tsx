@@ -1,7 +1,8 @@
 /**
- * Lumivex logo — a minimalist molecular hexagon mark (gold) paired with a
- * refined wordmark. The wordmark inherits `currentColor` so it adapts to dark
- * or light backgrounds; the mark stays gold as a fixed brand accent.
+ * Lumivex logo — a brilliant-cut diamond profile in gold, showing table,
+ * crown facets, girdle, and pavilion. Reads as luxury / high-cosmetic. The
+ * wordmark inherits `currentColor` so it adapts to dark or light backgrounds;
+ * the mark stays gold as a fixed brand accent.
  */
 export default function Logo({
   className = '',
@@ -19,28 +20,36 @@ export default function Logo({
           fill="none"
           aria-hidden
         >
-          {/* hexagon */}
+          {/* pavilion axis — subtle center line */}
           <path
-            d="M29 16 22.5 27.26 9.5 27.26 3 16 9.5 4.74 22.5 4.74Z"
+            d="M16 12 L16 27"
             stroke="#B8965A"
-            strokeWidth="1.4"
-            strokeLinejoin="round"
+            strokeWidth="0.85"
+            strokeOpacity="0.35"
           />
-          {/* molecular bonds */}
+          {/* outer silhouette: table, crown, girdle, pavilion, culet */}
           <path
-            d="M16 16 29 16M16 16 9.5 4.74M16 16 9.5 27.26"
+            d="M12 6 L20 6 L27 12 L16 27 L5 12 Z"
             stroke="#B8965A"
-            strokeWidth="1.1"
-            strokeOpacity="0.7"
+            strokeWidth="1.5"
+            strokeLinejoin="miter"
           />
-          {/* nodes */}
-          <circle cx="16" cy="16" r="2.4" fill="#B8965A" />
-          <circle cx="29" cy="16" r="1.5" fill="#B8965A" />
-          <circle cx="9.5" cy="4.74" r="1.5" fill="#B8965A" />
-          <circle cx="9.5" cy="27.26" r="1.5" fill="#B8965A" />
+          {/* girdle */}
+          <path
+            d="M5 12 L27 12"
+            stroke="#B8965A"
+            strokeWidth="1.2"
+          />
+          {/* crown facets */}
+          <path
+            d="M12 6 L16 12 L20 6"
+            stroke="#B8965A"
+            strokeWidth="1.2"
+            strokeLinejoin="miter"
+          />
         </svg>
       )}
-      <span className="text-[19px] font-medium leading-none tracking-[0.16em]">
+      <span className="text-[19px] font-normal leading-none tracking-[0.22em]">
         LUMIVEX
       </span>
     </span>

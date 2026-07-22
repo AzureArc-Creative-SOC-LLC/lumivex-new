@@ -20,13 +20,13 @@ export default function Footer() {
               split="lines"
               className="mt-6 max-w-md text-2xl font-extralight leading-snug text-ivory/80 md:text-3xl"
             >
-              Premium research compounds — engineered for precision, validated by
+              Premium research compounds  engineered for precision, validated by
               science.
             </RevealText>
             <FadeIn>
               <p className="mt-8 max-w-sm text-[12px] font-light leading-relaxed text-ivory/40">
                 Lumivex has never operated on any social media platforms. Our
-                official site is lumivex.store — please beware of scam sites.
+                official site is lumivex.store  please beware of scam sites.
               </p>
             </FadeIn>
 
@@ -36,7 +36,8 @@ export default function Footer() {
                   Newsletter
                 </p>
                 <p className="mt-1 text-[13px] font-light text-charcoal/65">
-                  Subscribe for research compound updates and giveaway entries.
+                  Subscribe for catalogue updates and new certificate-of-analysis
+                  releases.
                 </p>
                 <div className="mt-4">
                   <Newsletter />

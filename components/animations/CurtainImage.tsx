@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -38,7 +38,7 @@ export default function CurtainImage({
   alt,
   className = '',
   imgClassName = '',
-  sizes = '(max-width: 768px) 100vw, 50vw',
+  sizes = '(max-width: 767px) 100vw, 50vw',
   priority = false,
   direction = 'up',
   intensity = 6,

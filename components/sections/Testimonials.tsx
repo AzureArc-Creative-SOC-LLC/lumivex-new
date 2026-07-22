@@ -16,12 +16,6 @@ function initials(name: string) {
     .toUpperCase();
 }
 
-const Star = () => (
-  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-gold" aria-hidden>
-    <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 18.9 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" />
-  </svg>
-);
-
 const Chevron = ({ dir = 'right' }: { dir?: 'left' | 'right' }) => (
   <svg
     viewBox="0 0 24 24"
@@ -99,7 +93,7 @@ export default function Testimonials() {
         {/* header */}
         <div className="mb-14 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="eyebrow text-gold-light">Voices</span>
+            <span className="eyebrow text-gold-light">Supply Standards</span>
             <RevealText
               as="h2"
               split="lines"
@@ -108,14 +102,9 @@ export default function Testimonials() {
               Trusted by those who measure everything.
             </RevealText>
           </div>
-          <div className="flex items-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} />
-            ))}
-            <span className="ml-3 text-sm font-light text-ivory/55">
-              Rated by research partners
-            </span>
-          </div>
+          <span className="text-sm font-light text-ivory/55">
+            Feedback on documentation, packaging and service  never on use.
+          </span>
         </div>
 
         {/* featured quote */}

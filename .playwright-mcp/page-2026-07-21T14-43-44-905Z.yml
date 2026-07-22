@@ -1,0 +1,104 @@
+- generic [ref=f6e2]:
+  - status "Important notice" [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - generic [ref=f6e5]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+      - generic [ref=f6e6]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+  - generic [ref=f6e7]:
+    - banner [ref=f6e8]:
+      - generic [ref=f6e10]:
+        - link [ref=f6e11] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=f6e12]
+        - link "Shop" [ref=f6e14] [cursor=pointer]:
+          - /url: /shop
+        - link "Track" [ref=f6e18] [cursor=pointer]:
+          - /url: /track-order
+        - link "Wholesale" [ref=f6e22] [cursor=pointer]:
+          - /url: /wholesale
+        - link "About Us" [ref=f6e26] [cursor=pointer]:
+          - /url: /about
+        - link "Verify" [ref=f6e30] [cursor=pointer]:
+          - /url: https://spotafakealluvi.com/
+        - link "Alluvi Brazil" [ref=f6e34] [cursor=pointer]:
+          - /url: https://alluvibrazil.org/
+    - main [ref=f6e37]:
+      - generic [ref=f6e39]:
+        - generic [ref=f6e41]:
+          - img "NAD+ 1,000mg Product" [ref=f6e43]
+          - generic [ref=f6e44]:
+            - button "View image" [ref=f6e45] [cursor=pointer]:
+              - img "NAD+ 1,000mg Product" [ref=f6e46]
+            - button "View image" [ref=f6e47] [cursor=pointer]:
+              - img "NAD+ 1,000mg Product" [ref=f6e48]
+            - button "View image" [ref=f6e49] [cursor=pointer]:
+              - img "NAD+ 1,000mg Product" [ref=f6e50]
+            - button "View image" [ref=f6e51] [cursor=pointer]:
+              - img "NAD+ 1,000mg Product" [ref=f6e52]
+        - generic [ref=f6e53]:
+          - generic [ref=f6e54]: Support
+          - heading "NAD+ 1,000mg" [level=1] [ref=f6e55]
+          - generic [ref=f6e56]: £140
+          - generic [ref=f6e58]:
+            - paragraph [ref=f6e59]: NAD+ (Nicotinamide Adenine Dinucleotide) research formulation for laboratory analysis and in vitro studies only. Provided exclusively for controlled laboratory R&D applications.
+            - generic [ref=f6e60]:
+              - strong [ref=f6e61]: "Safety Protocol:"
+              - text: Produced for laboratory research only. Not for human or veterinary consumption.
+          - generic [ref=f6e62]:
+            - generic [ref=f6e63]:
+              - button "Package Contents" [ref=f6e64] [cursor=pointer]
+              - button "Storage Logic" [ref=f6e65] [cursor=pointer]
+              - button "Supply Chain" [ref=f6e66] [cursor=pointer]
+            - paragraph [ref=f6e68]: "Each NAD+ 1,000mg kit includes: 2 × Pre-filled NAD+ pens (500mg each) Research information sheet"
+      - generic [ref=f6e70]:
+        - generic [ref=f6e71]:
+          - heading "Continue Your Research" [level=2] [ref=f6e72]
+          - paragraph [ref=f6e73]: Handpicked research kits that pair well with NAD+ 1,000mg.
+        - generic [ref=f6e74]:
+          - link "Tirzepatide 40mg Product Compound Tirzepatide 40mg (R&D Only)" [ref=f6e76] [cursor=pointer]:
+            - /url: /product/tirzepatide-40mg
+            - img "Tirzepatide 40mg Product" [ref=f6e78]
+            - generic [ref=f6e79]:
+              - generic [ref=f6e80]: Compound
+              - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=f6e81]
+          - link "Retatrutide 20mg Product Compound Retatrutide 20mg (R&D Only)" [ref=f6e83] [cursor=pointer]:
+            - /url: /product/retatrutide-20mg
+            - img "Retatrutide 20mg Product" [ref=f6e85]
+            - generic [ref=f6e86]:
+              - generic [ref=f6e87]: Compound
+              - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=f6e88]
+          - link "Retatrutide 40mg Product Compound Retatrutide 40mg (R&D Only)" [ref=f6e90] [cursor=pointer]:
+            - /url: /product/retatrutide-40mg
+            - img "Retatrutide 40mg Product" [ref=f6e92]
+            - generic [ref=f6e93]:
+              - generic [ref=f6e94]: Compound
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f6e95]
+    - contentinfo [ref=f6e96]:
+      - generic [ref=f6e98]:
+        - link [ref=f6e100] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=f6e101]
+        - generic [ref=f6e102]:
+          - link "Shop" [ref=f6e103] [cursor=pointer]:
+            - /url: /shop
+          - link "About Us" [ref=f6e104] [cursor=pointer]:
+            - /url: /about
+          - link "Wholesale" [ref=f6e105] [cursor=pointer]:
+            - /url: /wholesale
+          - link "Home" [ref=f6e106] [cursor=pointer]:
+            - /url: /
+          - link "Verify" [ref=f6e107] [cursor=pointer]:
+            - /url: https://spotafakealluvi.com/
+        - generic [ref=f6e108]:
+          - link "Press Release" [ref=f6e109] [cursor=pointer]:
+            - /url: /policies/press-release
+          - link "Refund Policy" [ref=f6e110] [cursor=pointer]:
+            - /url: /policies/refund-policy
+          - link "Shipping Policy" [ref=f6e111] [cursor=pointer]:
+            - /url: /policies/shipping-policy
+        - generic [ref=f6e112]:
+          - link "Privacy Policy" [ref=f6e113] [cursor=pointer]:
+            - /url: /policies/privacy-policy
+          - link "Terms Of Service" [ref=f6e114] [cursor=pointer]:
+            - /url: /policies/terms-of-service
+          - paragraph [ref=f6e115]: © 2026 Alluvi. All rights reserved.
+  - button "Wallet" [ref=f6e116] [cursor=pointer]

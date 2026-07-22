@@ -1,0 +1,52 @@
+- generic [active] [ref=f13e1]:
+  - banner [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - link "Lumivex home" [ref=f13e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f13e5]: LUMIVEX
+      - navigation [ref=f13e14]:
+        - link "Continue shopping" [ref=f13e15] [cursor=pointer]:
+          - /url: /#products
+        - link "Cart, 0 items" [ref=f13e16] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f13e20]:
+    - generic [ref=f13e21]:
+      - heading "Your cart is empty" [level=1] [ref=f13e25]
+      - paragraph [ref=f13e26]: Explore our catalogue of high-purity research compounds, each supplied with full documentation.
+      - link "Browse the catalogue" [ref=f13e27] [cursor=pointer]:
+        - /url: /#products
+  - contentinfo [ref=f13e28]:
+    - generic [ref=f13e29]:
+      - generic [ref=f13e30]:
+        - generic [ref=f13e32]:
+          - paragraph [ref=f13e33]: Navigate
+          - list [ref=f13e34]:
+            - listitem [ref=f13e35]:
+              - button "About Us" [ref=f13e36] [cursor=pointer]
+            - listitem [ref=f13e37]:
+              - button "Shop" [ref=f13e38] [cursor=pointer]
+            - listitem [ref=f13e39]:
+              - button "Why Us" [ref=f13e40] [cursor=pointer]
+            - listitem [ref=f13e41]:
+              - button "Contact" [ref=f13e42] [cursor=pointer]
+        - generic [ref=f13e43]:
+          - paragraph [ref=f13e44]: Legal
+          - list [ref=f13e45]:
+            - listitem [ref=f13e46]:
+              - link "Press Release" [ref=f13e47] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f13e48]:
+              - link "Refund Policy" [ref=f13e49] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f13e50]:
+              - link "Privacy Policy" [ref=f13e51] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f13e52]:
+              - link "Terms of Service" [ref=f13e53] [cursor=pointer]:
+                - /url: "#"
+      - heading "LUMIVEX" [level=2] [ref=f13e55]
+      - generic [ref=f13e56]:
+        - paragraph [ref=f13e57]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f13e58]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f13e59] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f13e67] [cursor=pointer]

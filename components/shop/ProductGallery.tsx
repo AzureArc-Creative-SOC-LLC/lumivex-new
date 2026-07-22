@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -35,7 +35,7 @@ export default function ProductGallery({
           src={images[active]}
           alt={alt}
           fill
-          sizes="(max-width: 1024px) 100vw, 50vw"
+          sizes="(max-width: 1023px) 100vw, 50vw"
           priority
           quality={90}
           className="animate-[fadeIn_0.4s_ease] object-contain p-8"

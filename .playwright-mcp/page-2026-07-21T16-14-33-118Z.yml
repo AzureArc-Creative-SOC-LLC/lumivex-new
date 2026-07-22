@@ -1,0 +1,170 @@
+- generic [active] [ref=f25e1]:
+  - banner [ref=f25e2]:
+    - generic [ref=f25e3]:
+      - link "Lumivex home" [ref=f25e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f25e5]: LUMIVEX
+      - navigation [ref=f25e14]:
+        - link "Continue shopping" [ref=f25e15] [cursor=pointer]:
+          - /url: /#products
+        - link "Cart, 0 items" [ref=f25e16] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f25e20]:
+    - generic [ref=f25e22]:
+      - navigation [ref=f25e23]:
+        - link "Home" [ref=f25e24] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f25e25]: /
+        - link "Shop" [ref=f25e26] [cursor=pointer]:
+          - /url: /#products
+        - generic [ref=f25e27]: /
+        - generic [ref=f25e28]: Glow 70mg (R&D Only)
+      - generic [ref=f25e29]:
+        - generic [ref=f25e31]:
+          - img "Glow 70mg (R&D Only)" [ref=f25e33]
+          - generic [ref=f25e34]:
+            - button "View image 1" [ref=f25e35] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 1" [ref=f25e36]
+            - button "View image 2" [ref=f25e37] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 2" [ref=f25e38]
+            - button "View image 3" [ref=f25e39] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 3" [ref=f25e40]
+            - button "View image 4" [ref=f25e41] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 4" [ref=f25e42]
+        - generic [ref=f25e43]:
+          - generic [ref=f25e44]: Regenerative Blend
+          - heading "Glow 70mg (R&D Only) (R&D Only)" [level=1] [ref=f25e45]:
+            - text: Glow 70mg (R&D Only)
+            - generic [ref=f25e46]: (R&D Only)
+          - generic [ref=f25e47]:
+            - generic [ref=f25e48]: $100
+            - generic [ref=f25e49]: USD
+          - paragraph [ref=f25e50]: "A 70mg Glow formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation. MANDATORY DISCLAIMER: This product is used solely for in vitro experiments and cannot be: (1) used in clinical trials involving humans, (2) administered to humans as part of an experiment or investigation, or (3) supplied to another party for human investigational use. The information provided is for educational purposes only."
+          - paragraph [ref=f25e51]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - generic [ref=f25e52]:
+            - generic [ref=f25e53]:
+              - button "Decrease quantity" [ref=f25e54] [cursor=pointer]: −
+              - generic [ref=f25e55]: "1"
+              - button "Increase quantity" [ref=f25e56] [cursor=pointer]: +
+            - button "Add to cart" [ref=f25e57] [cursor=pointer]
+          - link "View cart & checkout →" [ref=f25e58] [cursor=pointer]:
+            - /url: /cart
+          - button "View Janoshik Analytical Report" [ref=f25e59] [cursor=pointer]
+          - generic [ref=f25e63]:
+            - generic [ref=f25e64]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=f25e68]
+              - paragraph [ref=f25e69]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=f25e70]:
+              - generic [ref=f25e71]:
+                - generic [ref=f25e72]: Batch Number
+                - generic [ref=f25e73]: GL0621XSA
+              - generic [ref=f25e74]:
+                - generic [ref=f25e75]: Fill Volume
+                - generic [ref=f25e76]: 3.4 mL
+              - generic [ref=f25e77]:
+                - generic [ref=f25e78]: Purity
+                - generic [ref=f25e79]: 98.6%
+            - table [ref=f25e81]:
+              - rowgroup [ref=f25e82]:
+                - row [ref=f25e83]:
+                  - columnheader "Compound" [ref=f25e84]
+                  - columnheader "Concentration" [ref=f25e85]
+                  - columnheader "Verified Content" [ref=f25e86]
+              - rowgroup [ref=f25e87]:
+                - row [ref=f25e88]:
+                  - cell "GHK-Cu" [ref=f25e89]
+                  - cell "7.59 mg/mL" [ref=f25e90]
+                  - cell "25.8 mg" [ref=f25e91]
+                - row [ref=f25e92]:
+                  - cell "BPC-157" [ref=f25e93]
+                  - cell "2.39 mg/mL" [ref=f25e94]
+                  - cell "8.13 mg" [ref=f25e95]
+                - row [ref=f25e96]:
+                  - cell "TB-500" [ref=f25e97]
+                  - cell "1.99 mg/mL" [ref=f25e98]
+                  - cell "6.76 mg" [ref=f25e99]
+            - paragraph [ref=f25e100]: Concentration is measured per mL; verified content reflects the total assayed mass across the stated fill volume.
+          - generic [ref=f25e101]:
+            - tablist [ref=f25e102]:
+              - tab "Package Contents" [selected] [ref=f25e103] [cursor=pointer]
+              - tab "Storage Logic" [ref=f25e104] [cursor=pointer]
+            - tabpanel [ref=f25e105]: "Each Glow 70mg Research kit includes: 2 × Pre-filled Research pens (Each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu) Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu"
+      - generic [ref=f25e106]:
+        - generic [ref=f25e107]:
+          - generic [ref=f25e108]:
+            - text: Continue exploring
+            - heading "Related compounds" [level=2] [ref=f25e109]
+          - link "View all" [ref=f25e110] [cursor=pointer]:
+            - /url: /#products
+        - generic [ref=f25e111]:
+          - article [ref=f25e112]:
+            - link "Tirzepatide 40mg GIP / GLP-1 Research" [ref=f25e113] [cursor=pointer]:
+              - /url: /product/tirzepatide-40mg
+              - img "Tirzepatide 40mg" [ref=f25e114]
+              - generic [ref=f25e115]: GIP / GLP-1 Research
+            - generic [ref=f25e116]:
+              - generic [ref=f25e117]:
+                - heading [level=3] [ref=f25e118]:
+                  - link "Tirzepatide 40mg" [ref=f25e119] [cursor=pointer]:
+                    - /url: /product/tirzepatide-40mg
+                - generic [ref=f25e120]: $100
+              - button "Add to cart" [ref=f25e121] [cursor=pointer]
+          - article [ref=f25e122]:
+            - link "Retatrutide 20mg Triple Agonist Research" [ref=f25e123] [cursor=pointer]:
+              - /url: /product/retatrutide-20mg
+              - img "Retatrutide 20mg" [ref=f25e124]
+              - generic [ref=f25e125]: Triple Agonist Research
+            - generic [ref=f25e126]:
+              - generic [ref=f25e127]:
+                - heading [level=3] [ref=f25e128]:
+                  - link "Retatrutide 20mg" [ref=f25e129] [cursor=pointer]:
+                    - /url: /product/retatrutide-20mg
+                - generic [ref=f25e130]: $100
+              - button "Add to cart" [ref=f25e131] [cursor=pointer]
+          - article [ref=f25e132]:
+            - link "Retatrutide 40mg Triple Agonist Research" [ref=f25e133] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg" [ref=f25e134]
+              - generic [ref=f25e135]: Triple Agonist Research
+            - generic [ref=f25e136]:
+              - generic [ref=f25e137]:
+                - heading [level=3] [ref=f25e138]:
+                  - link "Retatrutide 40mg" [ref=f25e139] [cursor=pointer]:
+                    - /url: /product/retatrutide-40mg
+                - generic [ref=f25e140]: $180
+              - button "Add to cart" [ref=f25e141] [cursor=pointer]
+  - contentinfo [ref=f25e142]:
+    - generic [ref=f25e143]:
+      - generic [ref=f25e144]:
+        - generic [ref=f25e146]:
+          - paragraph [ref=f25e147]: Navigate
+          - list [ref=f25e148]:
+            - listitem [ref=f25e149]:
+              - button "About Us" [ref=f25e150] [cursor=pointer]
+            - listitem [ref=f25e151]:
+              - button "Shop" [ref=f25e152] [cursor=pointer]
+            - listitem [ref=f25e153]:
+              - button "Why Us" [ref=f25e154] [cursor=pointer]
+            - listitem [ref=f25e155]:
+              - button "Contact" [ref=f25e156] [cursor=pointer]
+        - generic [ref=f25e157]:
+          - paragraph [ref=f25e158]: Legal
+          - list [ref=f25e159]:
+            - listitem [ref=f25e160]:
+              - link "Press Release" [ref=f25e161] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f25e162]:
+              - link "Refund Policy" [ref=f25e163] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f25e164]:
+              - link "Privacy Policy" [ref=f25e165] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f25e166]:
+              - link "Terms of Service" [ref=f25e167] [cursor=pointer]:
+                - /url: "#"
+      - heading "LUMIVEX" [level=2] [ref=f25e169]
+      - generic [ref=f25e170]:
+        - paragraph [ref=f25e171]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f25e172]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f25e173] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f25e181] [cursor=pointer]

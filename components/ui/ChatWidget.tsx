@@ -84,7 +84,12 @@ export default function ChatWidget() {
                 Research assistant
               </p>
               <p className="mt-0.5 text-[13px] font-medium text-charcoal">
-                Ask about peptides, products, or research protocols
+                Ask about product specifications, certificates, or orders
+              </p>
+              <p className="mt-1.5 text-[11px] font-light leading-relaxed text-charcoal/45">
+                This assistant cannot advise on use, dosing or administration.
+                All products are research materials — not for human or
+                veterinary use.
               </p>
             </div>
 

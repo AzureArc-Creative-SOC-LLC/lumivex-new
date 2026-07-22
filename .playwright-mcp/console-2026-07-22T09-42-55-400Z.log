@@ -1,0 +1,26 @@
+[     986ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1053ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1153ms] [WARNING] Image with src "/images/inhouse-image1-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1156ms] [WARNING] Image with src "/images/inhouse-image2-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1158ms] [WARNING] Image with src "/images/inhouse-img3-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1160ms] [WARNING] Image with src "/images/inhouse-img4-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1164ms] [WARNING] Image with src "/images/about-seo.webp" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1179ms] [WARNING] Image with src "/images/tirzepetide/Artboard2copy.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1183ms] [WARNING] Image with src "/images/retatwenty/Artboard4copy.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1186ms] [WARNING] Image with src "/images/retafourty/retpen.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1191ms] [WARNING] Image with src "/images/glow/glowpen.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1197ms] [WARNING] Image with src "/images/bpc/bpcpen.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[    1199ms] [WARNING] Image with src "/images/nad/pennad.jpg" is using quality "86" which is not configured in images.qualities [75]. Please update your config to [75, 86].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   11517ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   11562ms] [LOG] [Fast Refresh] done in 206ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477

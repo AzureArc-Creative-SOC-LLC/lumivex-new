@@ -1,0 +1,231 @@
+- generic [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "Lumivex home" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e5]: LUMIVEX
+      - navigation [ref=f1e14]:
+        - link "Continue shopping" [ref=f1e15] [cursor=pointer]:
+          - /url: /#products
+        - link "Cart, 0 items" [ref=f1e16] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f1e20]:
+    - generic [ref=f1e22]:
+      - navigation [ref=f1e23]:
+        - link "Home" [ref=f1e24] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f1e25]: /
+        - link "Shop" [ref=f1e26] [cursor=pointer]:
+          - /url: /#products
+        - generic [ref=f1e27]: /
+        - generic [ref=f1e28]: Glow 70mg (R&D Only)
+      - generic [ref=f1e29]:
+        - generic [ref=f1e31]:
+          - img "Glow 70mg (R&D Only)" [ref=f1e33]
+          - generic [ref=f1e34]:
+            - button "View image 1" [ref=f1e35] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 1" [ref=f1e36]
+            - button "View image 2" [ref=f1e37] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 2" [ref=f1e38]
+            - button "View image 3" [ref=f1e39] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 3" [ref=f1e40]
+            - button "View image 4" [ref=f1e41] [cursor=pointer]:
+              - img "Glow 70mg (R&D Only) thumbnail 4" [ref=f1e42]
+        - generic [ref=f1e43]:
+          - generic [ref=f1e44]: R&D Only
+          - heading "Glow 70mg (R&D Only)" [level=1] [ref=f1e45]
+          - generic [ref=f1e46]:
+            - generic [ref=f1e47]: £100
+            - generic [ref=f1e48]: GBP
+            - generic [ref=f1e49]: 99.95% purity
+          - paragraph [ref=f1e50]: "A 70mg Glow formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation. MANDATORY DISCLAIMER: This product is used solely for in vitro experiments and cannot be: (1) used in clinical trials involving humans, (2) administered to humans as part of an experiment or investigation, or (3) supplied to another party for human investigational use. The information provided is for educational purposes only."
+          - generic [ref=f1e51]:
+            - generic [ref=f1e52]:
+              - button "Decrease quantity" [ref=f1e53] [cursor=pointer]: −
+              - generic [ref=f1e54]: "1"
+              - button "Increase quantity" [ref=f1e55] [cursor=pointer]: +
+            - button "Add to cart" [ref=f1e56] [cursor=pointer]
+          - link "View cart & checkout →" [ref=f1e57] [cursor=pointer]:
+            - /url: /cart
+          - button "Janoshik Certificate View third-party certificate of analysis" [ref=f1e58] [cursor=pointer]:
+            - generic [ref=f1e62]:
+              - generic [ref=f1e63]: Janoshik Certificate
+              - generic [ref=f1e64]: View third-party certificate of analysis
+            - generic [ref=f1e65]: →
+          - list [ref=f1e66]:
+            - listitem [ref=f1e67]: Janoshik third-party tested
+            - listitem [ref=f1e69]: Cold-chain dispatch with ice pack
+            - listitem [ref=f1e71]: Tracked 2-day UK delivery
+          - paragraph [ref=f1e73]: For laboratory and research use only. Not for human or veterinary use, food, or drug applications. Each order ships with a full certificate of analysis and batch documentation.
+      - generic [ref=f1e74]:
+        - generic [ref=f1e75]:
+          - text: Specifications
+          - heading "Research specifications" [level=2] [ref=f1e76]
+          - generic [ref=f1e77]:
+            - generic [ref=f1e78]:
+              - term [ref=f1e79]: Composition
+              - definition [ref=f1e80]: GHK-Cu + BPC-157 + TB-500
+            - generic [ref=f1e81]:
+              - term [ref=f1e82]: Total Contents
+              - definition [ref=f1e83]: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu
+            - generic [ref=f1e84]:
+              - term [ref=f1e85]: Fill Volume
+              - definition [ref=f1e86]: 3.4 mL
+            - generic [ref=f1e87]:
+              - term [ref=f1e88]: Batch Number
+              - definition [ref=f1e89]: GL0621XSA
+            - generic [ref=f1e90]:
+              - term [ref=f1e91]: Form
+              - definition [ref=f1e92]: Pre-filled research pen
+            - generic [ref=f1e93]:
+              - term [ref=f1e94]: Storage
+              - definition [ref=f1e95]: 2–8°C refrigerated (do not freeze)
+        - generic [ref=f1e96]:
+          - text: Kit & delivery
+          - heading "What’s included" [level=2] [ref=f1e97]
+          - generic [ref=f1e98]:
+            - generic [ref=f1e99]:
+              - generic [ref=f1e100]: Kit contents
+              - paragraph [ref=f1e101]: "Each Glow 70mg Research kit includes: 2 × Pre-filled Research pens (each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu) Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu"
+            - generic [ref=f1e102]:
+              - generic [ref=f1e103]: Storage
+              - paragraph [ref=f1e104]: Store refrigerated (2–8°C). Do not freeze. Supplied in fixed-volume sealed format for laboratory analysis.
+            - generic [ref=f1e105]:
+              - generic [ref=f1e106]: Delivery
+              - paragraph [ref=f1e107]: Dispatched with a cold pack. Tracked 2 DAY UK Delivery. Research & Development purposes only.
+      - dialog "Certificate of analysis" [ref=f1e194]:
+        - generic [ref=f1e195]:
+          - generic [ref=f1e196]:
+            - generic [ref=f1e197]:
+              - text: Janoshik Analytical
+              - heading "Certificate of Analysis" [level=2] [ref=f1e198]
+              - paragraph [ref=f1e199]: Third-party independent lab report — Glow 70mg (R&D Only)
+            - button "Close certificate" [active] [ref=f1e200] [cursor=pointer]
+          - generic [ref=f1e203]:
+            - generic [ref=f1e204]:
+              - generic [ref=f1e205]:
+                - generic [ref=f1e206]:
+                  - generic [ref=f1e207]: Batch Number
+                  - generic [ref=f1e208]: GL0621XSA
+                - generic [ref=f1e209]:
+                  - generic [ref=f1e210]: Fill Volume
+                  - generic [ref=f1e211]: 3.4 mL
+              - generic [ref=f1e212]:
+                - generic [ref=f1e213]: Verified Compound Content
+                - table [ref=f1e215]:
+                  - rowgroup [ref=f1e216]:
+                    - row [ref=f1e217]:
+                      - columnheader "Compound" [ref=f1e218]
+                      - columnheader "Concentration" [ref=f1e219]
+                      - columnheader "Content" [ref=f1e220]
+                  - rowgroup [ref=f1e221]:
+                    - row [ref=f1e222]:
+                      - cell "GHK-Cu" [ref=f1e223]
+                      - cell "7.59 mg/mL" [ref=f1e224]
+                      - cell "25.8 mg" [ref=f1e225]
+                    - row [ref=f1e226]:
+                      - cell "BPC-157" [ref=f1e227]
+                      - cell "2.39 mg/mL" [ref=f1e228]
+                      - cell "8.13 mg" [ref=f1e229]
+                    - row [ref=f1e230]:
+                      - cell "TB-500" [ref=f1e231]
+                      - cell "1.99 mg/mL" [ref=f1e232]
+                      - cell "6.76 mg" [ref=f1e233]
+            - generic [ref=f1e234]:
+              - img "Certificate of analysis page 1" [ref=f1e236]
+              - img "Certificate of analysis page 2" [ref=f1e238]
+              - img "Certificate of analysis page 3" [ref=f1e240]
+          - generic [ref=f1e241]:
+            - paragraph [ref=f1e242]: Independently verified by Janoshik Analytical.
+            - generic [ref=f1e243]:
+              - link "Verify on janoshik.com ↗" [ref=f1e244] [cursor=pointer]:
+                - /url: https://verify.janoshik.com/tests/163217-ALLUVI_GLOW_70MG_KIT_DCL3AJSE4JQP
+              - link "Download certificate" [ref=f1e245] [cursor=pointer]:
+                - /url: /images/glow/certificate/report.png
+      - generic [ref=f1e108]:
+        - generic [ref=f1e109]:
+          - generic [ref=f1e110]:
+            - text: Continue exploring
+            - heading "Related compounds" [level=2] [ref=f1e111]
+          - link "View all" [ref=f1e112] [cursor=pointer]:
+            - /url: /#products
+        - generic [ref=f1e113]:
+          - article [ref=f1e114]:
+            - link "Tirzepatide 40mg GIP / GLP-1 Research" [ref=f1e115] [cursor=pointer]:
+              - /url: /product/tirzepatide-40mg
+              - img "Tirzepatide 40mg" [ref=f1e116]
+              - generic [ref=f1e117]: GIP / GLP-1 Research
+            - generic [ref=f1e118]:
+              - generic [ref=f1e119]:
+                - heading [level=3] [ref=f1e120]:
+                  - link "Tirzepatide 40mg" [ref=f1e121] [cursor=pointer]:
+                    - /url: /product/tirzepatide-40mg
+                - generic [ref=f1e122]: £100
+              - button "Add to cart" [ref=f1e123] [cursor=pointer]
+          - article [ref=f1e124]:
+            - link "Retatrutide 20mg Triple Agonist Research" [ref=f1e125] [cursor=pointer]:
+              - /url: /product/retatrutide-20mg
+              - img "Retatrutide 20mg" [ref=f1e126]
+              - generic [ref=f1e127]: Triple Agonist Research
+            - generic [ref=f1e128]:
+              - generic [ref=f1e129]:
+                - heading [level=3] [ref=f1e130]:
+                  - link "Retatrutide 20mg" [ref=f1e131] [cursor=pointer]:
+                    - /url: /product/retatrutide-20mg
+                - generic [ref=f1e132]: £100
+              - button "Add to cart" [ref=f1e133] [cursor=pointer]
+          - article [ref=f1e134]:
+            - link "Retatrutide 40mg Triple Agonist Research" [ref=f1e135] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg" [ref=f1e136]
+              - generic [ref=f1e137]: Triple Agonist Research
+            - generic [ref=f1e138]:
+              - generic [ref=f1e139]:
+                - heading [level=3] [ref=f1e140]:
+                  - link "Retatrutide 40mg" [ref=f1e141] [cursor=pointer]:
+                    - /url: /product/retatrutide-40mg
+                - generic [ref=f1e142]: £180
+              - button "Add to cart" [ref=f1e143] [cursor=pointer]
+  - contentinfo [ref=f1e144]:
+    - generic [ref=f1e145]:
+      - generic [ref=f1e146]:
+        - paragraph [ref=f1e148]:
+          - generic [ref=f1e149]: Premium research compounds —
+          - generic [ref=f1e150]: engineered for precision, validated
+          - generic [ref=f1e151]: by science.
+        - generic [ref=f1e152]:
+          - paragraph [ref=f1e153]: Navigate
+          - list [ref=f1e154]:
+            - listitem [ref=f1e155]:
+              - button "About Us" [ref=f1e156] [cursor=pointer]
+            - listitem [ref=f1e157]:
+              - button "Shop" [ref=f1e158] [cursor=pointer]
+            - listitem [ref=f1e159]:
+              - button "Why Us" [ref=f1e160] [cursor=pointer]
+            - listitem [ref=f1e161]:
+              - button "Contact" [ref=f1e162] [cursor=pointer]
+        - generic [ref=f1e163]:
+          - paragraph [ref=f1e164]: Legal
+          - list [ref=f1e165]:
+            - listitem [ref=f1e166]:
+              - link "Press Release" [ref=f1e167] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f1e168]:
+              - link "Refund Policy" [ref=f1e169] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f1e170]:
+              - link "Shipping Policy" [ref=f1e171] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f1e172]:
+              - link "Privacy Policy" [ref=f1e173] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f1e174]:
+              - link "Terms of Service" [ref=f1e175] [cursor=pointer]:
+                - /url: "#"
+      - heading "LUMIVEX" [level=2] [ref=f1e177]
+      - generic [ref=f1e178]:
+        - paragraph [ref=f1e179]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f1e180]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f1e181] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f1e189] [cursor=pointer]
+  - alert [ref=f1e193]

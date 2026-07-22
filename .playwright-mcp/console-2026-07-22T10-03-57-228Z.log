@@ -1,0 +1,16 @@
+[     615ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[     642ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[     719ms] [WARNING] Image with src "/images/retatwenty/retafront.jpeg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   62466ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   62644ms] [LOG] [Fast Refresh] done in 284ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   62842ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   63023ms] [LOG] [Fast Refresh] done in 282ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   63596ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   63883ms] [LOG] [Fast Refresh] done in 425ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   64094ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   64447ms] [LOG] [Fast Refresh] done in 468ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   64635ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   64984ms] [LOG] [Fast Refresh] done in 458ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   65156ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   65521ms] [LOG] [Fast Refresh] done in 468ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477

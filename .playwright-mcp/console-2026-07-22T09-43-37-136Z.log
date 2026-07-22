@@ -1,0 +1,6 @@
+[     125ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[     135ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[     352ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[     441ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[     527ms] [WARNING] Image with src "/images/glow/glowpen.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477

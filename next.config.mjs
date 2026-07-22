@@ -22,6 +22,9 @@ const nextConfig = {
     // Optimize on demand: resize to the requested size and serve modern
     // formats. Quality stays high (set per-image where clarity matters).
     formats: ['image/avif', 'image/webp'],
+    // Next 16 only generates the quality levels listed here. 90 is used by the
+    // product gallery, where label text has to stay legible when zoomed.
+    qualities: [75, 90],
     // Cache optimized variants aggressively (1 year).
     minimumCacheTTL: 31536000,
     remotePatterns: [

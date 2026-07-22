@@ -118,7 +118,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_15%]"
+          className="object-cover object-[80%_50%] sm:object-[62%_25%] md:object-[50%_15%]"
         />
       </div>
 
@@ -135,7 +135,7 @@ export default function Hero() {
           /0, not `transparent` (= transparent black), which fades through grey. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#332E18]/75 via-[#4A4226]/38 to-[#4A4226]/0 md:from-[#332E18]/72 md:via-[#3E3820]/34 md:to-[#4A4226]/0"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#332E18]/88 via-[#4A4226]/62 to-[#4A4226]/28 md:from-[#332E18]/72 md:via-[#3E3820]/34 md:to-[#4A4226]/0"
       />
 
       {/* Gold edge vignette, echoing the framing of the reference art */}
@@ -144,16 +144,29 @@ export default function Hero() {
         className="pointer-events-none absolute inset-y-0 right-0 hidden w-[16%] bg-gradient-to-l from-gold/32 to-gold/0 md:block"
       />
 
+      {/* Foot wash — the shot's near-white table top lands under the body copy,
+          the CTAs and the scroll cue at every width, and the horizontal wash
+          above is at its weakest by then, leaving ivory type on near-white.
+          This lifts the bottom band back to a readable contrast: heaviest on
+          portrait, where the table occupies the most height. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-[#2A2413]/90 via-[#332E18]/55 to-[#332E18]/0 md:h-[40%] md:from-[#2A2413]/72 md:via-[#332E18]/34"
+      />
+
       {/* Content */}
       <div
         ref={contentRef}
         className="container-wide relative z-10 flex flex-col items-start text-left will-change-transform"
       >
+        {/* Gold on the subject's skin tone is ~1.2:1 at the mobile crop, so the
+            eyebrow runs ivory there and only picks up gold once the crop moves
+            the copy back over the gradient at md. */}
         <span
           data-hero-fade
-          className="eyebrow mb-8 text-gold-light"
+          className="eyebrow mb-8 text-ivory/90 md:text-gold-light"
         >
-          Engineered for precision · Validated by science
+          Engineered for precision · Verified by third-party analysis
         </span>
         <h1
           ref={titleRef}
@@ -167,8 +180,9 @@ export default function Hero() {
           className="text-pretty mt-8 max-w-xl text-[15px] font-light leading-relaxed text-ivory/75 sm:mt-10 sm:text-base md:text-lg"
         >
           Supplying leading laboratories across the UK & EU with high-purity
-          research compounds — manufactured in-house, batch-tested, and fully
-          traceable for R&amp;D applications.
+          research compounds  manufactured in-house, batch tested, and fully
+          traceable for R&amp;D applications. Research use only  not for human
+          or veterinary use.
         </p>
         <div
           data-hero-fade

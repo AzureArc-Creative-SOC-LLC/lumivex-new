@@ -1,0 +1,126 @@
+- generic [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "Lumivex home" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f2e5]: LUMIVEX
+      - navigation [ref=f2e14]:
+        - link "Continue shopping" [ref=f2e15] [cursor=pointer]:
+          - /url: /#products
+        - link "Cart, 1 item" [ref=f2e68] [cursor=pointer]:
+          - /url: /cart
+          - generic [ref=f2e69]: "1"
+  - main [ref=f2e20]:
+    - generic [ref=f2e21]:
+      - generic [ref=f2e70]:
+        - button "← Back to cart" [ref=f2e71] [cursor=pointer]
+        - text: Final step
+        - heading "Checkout" [level=1] [ref=f2e72]
+      - generic [ref=f2e73]:
+        - generic [ref=f2e74]:
+          - group "Contact" [ref=f2e75]:
+            - generic [ref=f2e77]:
+              - generic [ref=f2e78]:
+                - generic [ref=f2e79]: First name
+                - textbox "First name" [ref=f2e80]:
+                  - /placeholder: Jordan
+              - generic [ref=f2e81]:
+                - generic [ref=f2e82]: Last name
+                - textbox "Last name" [ref=f2e83]:
+                  - /placeholder: Avery
+              - generic [ref=f2e84]:
+                - generic [ref=f2e85]: Email address
+                - textbox "Email address" [ref=f2e86]:
+                  - /placeholder: jordan@lab.com
+              - generic [ref=f2e87]:
+                - generic [ref=f2e88]: Mobile
+                - textbox "Mobile" [ref=f2e89]:
+                  - /placeholder: +44 7700 900123
+          - group "Billing address" [ref=f2e90]:
+            - generic [ref=f2e92]:
+              - generic [ref=f2e93]:
+                - generic [ref=f2e94]: Address line 1
+                - textbox "Address line 1" [ref=f2e95]:
+                  - /placeholder: 123 Research Park
+              - generic [ref=f2e96]:
+                - generic [ref=f2e97]: Address line 2(optional)
+                - textbox "Address line 2(optional)" [ref=f2e98]:
+                  - /placeholder: Unit 4B
+              - generic [ref=f2e99]:
+                - generic [ref=f2e100]: City
+                - textbox "City" [ref=f2e101]:
+                  - /placeholder: London
+              - generic [ref=f2e102]:
+                - generic [ref=f2e103]: Postcode
+                - textbox "Postcode" [ref=f2e104]:
+                  - /placeholder: SW1A 1AA
+              - generic [ref=f2e105]:
+                - generic [ref=f2e106]: Country
+                - textbox "Country" [ref=f2e107]:
+                  - /placeholder: United Kingdom
+        - generic [ref=f2e109]:
+          - heading "Order Summary" [level=2] [ref=f2e110]
+          - list [ref=f2e111]:
+            - listitem [ref=f2e112]:
+              - generic [ref=f2e113]:
+                - img "Glow 70mg (R&D Only)" [ref=f2e114]
+                - generic [ref=f2e115]: "1"
+              - generic [ref=f2e116]: Glow 70mg (R&D Only)
+              - generic [ref=f2e117]: $100
+          - generic [ref=f2e119]:
+            - textbox "Promo code" [ref=f2e120]
+            - button "Apply" [ref=f2e121] [cursor=pointer]
+          - generic [ref=f2e122]:
+            - generic [ref=f2e123]:
+              - generic [ref=f2e124]: Subtotal
+              - generic [ref=f2e125]: $100
+            - generic [ref=f2e126]:
+              - generic [ref=f2e127]: Total
+              - generic [ref=f2e128]: $100
+          - generic [ref=f2e129]:
+            - paragraph [ref=f2e130]: By proceeding with this purchase, you acknowledge that these products are intended solely for laboratory research purposes and are not intended for human or veterinary use. These products are not intended to diagnose, treat, cure, or prevent any disease.
+            - generic [ref=f2e131]:
+              - checkbox "I confirm I am 18 or older, am acquiring these materials for laboratory research purposes only, will not administer them to humans or animals, and accept sole responsibility for lawful handling, storage and disposal." [checked] [active] [ref=f2e132]
+              - generic [ref=f2e133]: I confirm I am 18 or older, am acquiring these materials for laboratory research purposes only, will not administer them to humans or animals, and accept sole responsibility for lawful handling, storage and disposal.
+          - button "Place order · $100" [ref=f2e134] [cursor=pointer]
+          - paragraph [ref=f2e135]: Payment by bank transfer. We’ll email you secure payment instructions and a capture link for your screenshot.
+  - contentinfo [ref=f2e25]:
+    - generic [ref=f2e26]:
+      - generic [ref=f2e27]:
+        - paragraph [ref=f2e136]:
+          - generic [ref=f2e137]: Premium research compounds —
+          - generic [ref=f2e138]: engineered for precision, validated
+          - generic [ref=f2e139]: by science.
+        - generic [ref=f2e29]:
+          - paragraph [ref=f2e30]: Navigate
+          - list [ref=f2e31]:
+            - listitem [ref=f2e32]:
+              - button "About Us" [ref=f2e33] [cursor=pointer]
+            - listitem [ref=f2e34]:
+              - button "Shop" [ref=f2e35] [cursor=pointer]
+            - listitem [ref=f2e36]:
+              - button "Why Us" [ref=f2e37] [cursor=pointer]
+            - listitem [ref=f2e38]:
+              - button "Contact" [ref=f2e39] [cursor=pointer]
+        - generic [ref=f2e40]:
+          - paragraph [ref=f2e41]: Legal
+          - list [ref=f2e42]:
+            - listitem [ref=f2e43]:
+              - link "Press Release" [ref=f2e44] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f2e45]:
+              - link "Refund Policy" [ref=f2e46] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f2e47]:
+              - link "Privacy Policy" [ref=f2e48] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f2e49]:
+              - link "Terms of Service" [ref=f2e50] [cursor=pointer]:
+                - /url: "#"
+      - heading "LUMIVEX" [level=2] [ref=f2e52]
+      - generic [ref=f2e53]:
+        - paragraph [ref=f2e54]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f2e55]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f2e56] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f2e64] [cursor=pointer]
+  - alert [ref=f2e140]

@@ -151,7 +151,7 @@ export default function WhyUs() {
                 src="/images/whyus11-seo.webp"
                 alt="Lumivex research scientist"
                 fill
-                sizes="320px"
+                sizes="(min-width: 1024px) 420px, (min-width: 640px) 370px, 310px"
                 className="object-cover"
               />
             </div>
@@ -166,7 +166,7 @@ export default function WhyUs() {
                 src="/images/whyus2-seo.webp"
                 alt="Lumivex research laboratory team"
                 fill
-                sizes="140px"
+                sizes="(min-width: 640px) 175px, 140px"
                 className="object-cover"
               />
             </div>
@@ -181,7 +181,7 @@ export default function WhyUs() {
                 src="/images/whyus3new-seo.webp"
                 alt="Laboratory glassware"
                 fill
-                sizes="120px"
+                sizes="(min-width: 640px) 150px, 118px"
                 className="object-cover"
               />
             </div>
@@ -205,8 +205,8 @@ export default function WhyUs() {
               data-reveal
               className="mt-5 max-w-xl text-[15px] font-light leading-relaxed text-charcoal/55"
             >
-              Every compound is engineered, validated, and dispatched under one
-              roof — with documented integrity from synthesis to delivery and a
+              Every compound is engineered, validated, and released under one
+              roof  with documented integrity from synthesis to release and a
               certificate of analysis behind every batch.
             </p>
 

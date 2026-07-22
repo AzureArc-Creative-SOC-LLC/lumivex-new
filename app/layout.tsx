@@ -8,23 +8,22 @@ import ChatWidget from '@/components/ui/ChatWidget';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lumivex.store'),
-  title: 'Lumivex — Premium Research Compounds | UK & EU R&D Supplier',
+  title: 'Lumivex — Research Compounds for Laboratory Use | UK & EU Supplier',
   description:
-    'Lumivex supplies leading laboratories with high-purity, batch-tested research peptides and compounds — manufactured in-house with full traceability. Research use only.',
+    'Lumivex supplies laboratories with high-purity, batch-tested research peptides and reference compounds — manufactured in-house, third-party analysed, fully traceable. Research use only — not for human or veterinary use.',
   keywords: [
     'research peptides',
-    'tirzepatide',
-    'retatrutide',
-    'BPC-157',
-    'TB-500',
-    'NAD+',
+    'research reference materials',
+    'laboratory research compounds',
+    'certificate of analysis',
+    'third-party tested peptides',
     'R&D compounds',
-    'laboratory research',
+    'in vitro research materials',
   ],
   openGraph: {
-    title: 'Lumivex — Premium Research Compounds',
+    title: 'Lumivex — Research Compounds for Laboratory Use',
     description:
-      'High-purity, batch-tested research peptides and compounds for laboratory R&D across the UK & EU. Research use only.',
+      'High-purity, batch-tested research peptides and reference compounds for laboratory R&D across the UK & EU. Research use only — not for human or veterinary use.',
     type: 'website',
   },
 };

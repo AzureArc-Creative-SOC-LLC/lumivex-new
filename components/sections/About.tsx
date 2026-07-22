@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { img, IMAGES, STATS } from '@/lib/data';
 import CurtainImage from '@/components/animations/CurtainImage';
@@ -17,7 +17,7 @@ export default function About() {
               src={img(IMAGES.aboutPortrait, 1200)}
               alt="Lumivex research compound, in-house"
               className="aspect-[3/4] w-full"
-              sizes="(max-width: 1024px) 100vw, 42vw"
+              sizes="(max-width: 1023px) 100vw, 42vw"
               direction="up"
               intensity={9}
             />
@@ -40,10 +40,10 @@ export default function About() {
                 split="lines"
                 className="text-base font-light leading-relaxed text-charcoal/65"
               >
-                Lumivex develops innovative compounds for laboratory research use
-                only. Our science-backed peptides and formulations are provided
-                in sealed formats with regulated, research-only supply and full
-                traceability across Europe & the UK.
+                Lumivex develops compounds for laboratory research use only. Our
+                research peptides and formulations are supplied in sealed,
+                fixed-volume formats with regulated, research-only supply and
+                full traceability across Europe &amp; the UK.
               </RevealText>
               <RevealText
                 as="p"
@@ -51,8 +51,9 @@ export default function About() {
                 className="text-base font-light leading-relaxed text-charcoal/65"
               >
                 Our in-house R&amp;D lab produces research-grade peptide APIs
-                under ISO-certified clean-room standards — with batch validation
-                and documented chain of custody from synthesis through dispatch.
+                under controlled clean-room conditions — with batch validation,
+                third-party analysis and a documented chain of custody from
+                synthesis through release.
               </RevealText>
             </div>
 

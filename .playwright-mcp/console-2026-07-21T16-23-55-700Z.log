@@ -1,0 +1,34 @@
+[      70ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   55612ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   59003ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   68282ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[   69337ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  215814ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  219292ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  227627ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  227769ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  465357ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  470759ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  471063ms] [LOG] [HMR] connected @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  471924ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  503015ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  506364ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  509724ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  513060ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  516407ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  523768ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  531118ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  538480ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  545835ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  553194ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  560543ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  567886ms] [ERROR] WebSocket connection to 'ws://localhost:4100/_next/webpack-hmr?id=akgsXdjPiUKhitHWnf-tQ' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_client_0tdc9wn._.js:13422
+[  567929ms] [WARNING] Image with src "/images/tirzepetide/Artboard2.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2477
+[  568928ms] [ERROR] WebSocket is already in CLOSING or CLOSED state. @ http://localhost:4100/_next/static/chunks/0_qv_next_dist_0n-c0m_._.js:2836

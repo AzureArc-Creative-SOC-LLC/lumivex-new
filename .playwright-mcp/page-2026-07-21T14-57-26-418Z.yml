@@ -1,0 +1,166 @@
+- generic [active] [ref=f14e1]:
+  - banner [ref=f14e2]:
+    - generic [ref=f14e3]:
+      - link "Lumivex home" [ref=f14e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f14e5]: LUMIVEX
+      - navigation [ref=f14e14]:
+        - link "Continue shopping" [ref=f14e15] [cursor=pointer]:
+          - /url: /#products
+        - link "Cart, 0 items" [ref=f14e16] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f14e20]:
+    - generic [ref=f14e22]:
+      - navigation [ref=f14e23]:
+        - link "Home" [ref=f14e24] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f14e25]: /
+        - link "Shop" [ref=f14e26] [cursor=pointer]:
+          - /url: /#products
+        - generic [ref=f14e27]: /
+        - generic [ref=f14e28]: Retatrutide 40mg
+      - generic [ref=f14e29]:
+        - generic [ref=f14e31]:
+          - img "Retatrutide 40mg" [ref=f14e33]
+          - generic [ref=f14e34]:
+            - button "View image 1" [ref=f14e35] [cursor=pointer]:
+              - img "Retatrutide 40mg thumbnail 1" [ref=f14e36]
+            - button "View image 2" [ref=f14e37] [cursor=pointer]:
+              - img "Retatrutide 40mg thumbnail 2" [ref=f14e38]
+            - button "View image 3" [ref=f14e39] [cursor=pointer]:
+              - img "Retatrutide 40mg thumbnail 3" [ref=f14e40]
+            - button "View image 4" [ref=f14e41] [cursor=pointer]:
+              - img "Retatrutide 40mg thumbnail 4" [ref=f14e42]
+        - generic [ref=f14e43]:
+          - generic [ref=f14e44]: Triple Agonist Research
+          - heading "Retatrutide 40mg (R&D Only)" [level=1] [ref=f14e45]:
+            - text: Retatrutide 40mg
+            - generic [ref=f14e46]: (R&D Only)
+          - generic [ref=f14e47]:
+            - generic [ref=f14e48]: $180
+            - generic [ref=f14e49]: USD
+          - paragraph [ref=f14e50]: A 40mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+          - paragraph [ref=f14e51]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - generic [ref=f14e52]:
+            - generic [ref=f14e53]:
+              - button "Decrease quantity" [ref=f14e54] [cursor=pointer]: −
+              - generic [ref=f14e55]: "1"
+              - button "Increase quantity" [ref=f14e56] [cursor=pointer]: +
+            - button "Add to cart" [ref=f14e57] [cursor=pointer]
+          - link "View cart & checkout →" [ref=f14e58] [cursor=pointer]:
+            - /url: /cart
+          - button "View Janoshik Analytical Report" [ref=f14e59] [cursor=pointer]
+          - generic [ref=f14e63]:
+            - generic [ref=f14e64]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=f14e68]
+              - paragraph [ref=f14e69]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=f14e70]:
+              - generic [ref=f14e71]:
+                - generic [ref=f14e72]: Batch Number
+                - generic [ref=f14e73]: AR1739JAT
+              - generic [ref=f14e74]:
+                - generic [ref=f14e75]: Fill Volume
+                - generic [ref=f14e76]: 2.4 mL
+              - generic [ref=f14e77]:
+                - generic [ref=f14e78]: Purity
+                - generic [ref=f14e79]: 99.269%
+            - table [ref=f14e81]:
+              - rowgroup [ref=f14e82]:
+                - row [ref=f14e83]:
+                  - columnheader "Compound" [ref=f14e84]
+                  - columnheader "Concentration" [ref=f14e85]
+                  - columnheader "Verified Content" [ref=f14e86]
+              - rowgroup [ref=f14e87]:
+                - row [ref=f14e88]:
+                  - cell "Retatrutide" [ref=f14e89]
+                  - cell "18.22 mg/mL" [ref=f14e90]
+                  - cell "43.72 mg" [ref=f14e91]
+            - paragraph [ref=f14e92]: Concentration is measured per mL; verified content reflects the total assayed mass across the stated fill volume.
+          - generic [ref=f14e93]:
+            - tablist [ref=f14e94]:
+              - tab "Package Contents" [selected] [ref=f14e95] [cursor=pointer]
+              - tab "Storage Logic" [ref=f14e96] [cursor=pointer]
+              - tab "Supply Chain" [ref=f14e97] [cursor=pointer]
+            - tabpanel [ref=f14e98]: "Each Retatrutide 40mg Research kit includes: Pre-filled Research pen (40mg Retatrutide) Research information sheet"
+      - generic [ref=f14e99]:
+        - generic [ref=f14e100]:
+          - generic [ref=f14e101]:
+            - text: Continue exploring
+            - heading "Related compounds" [level=2] [ref=f14e102]
+          - link "View all" [ref=f14e103] [cursor=pointer]:
+            - /url: /#products
+        - generic [ref=f14e104]:
+          - article [ref=f14e105]:
+            - link "Retatrutide 20mg Triple Agonist Research" [ref=f14e106] [cursor=pointer]:
+              - /url: /product/retatrutide-20mg
+              - img "Retatrutide 20mg" [ref=f14e107]
+              - generic [ref=f14e108]: Triple Agonist Research
+            - generic [ref=f14e109]:
+              - generic [ref=f14e110]:
+                - heading [level=3] [ref=f14e111]:
+                  - link "Retatrutide 20mg" [ref=f14e112] [cursor=pointer]:
+                    - /url: /product/retatrutide-20mg
+                - generic [ref=f14e113]: $100
+              - button "Add to cart" [ref=f14e114] [cursor=pointer]
+          - article [ref=f14e115]:
+            - link "Tirzepatide 40mg GIP / GLP-1 Research" [ref=f14e116] [cursor=pointer]:
+              - /url: /product/tirzepatide-40mg
+              - img "Tirzepatide 40mg" [ref=f14e117]
+              - generic [ref=f14e118]: GIP / GLP-1 Research
+            - generic [ref=f14e119]:
+              - generic [ref=f14e120]:
+                - heading [level=3] [ref=f14e121]:
+                  - link "Tirzepatide 40mg" [ref=f14e122] [cursor=pointer]:
+                    - /url: /product/tirzepatide-40mg
+                - generic [ref=f14e123]: $100
+              - button "Add to cart" [ref=f14e124] [cursor=pointer]
+          - article [ref=f14e125]:
+            - link "Glow 70mg (R&D Only) Regenerative Blend" [ref=f14e126] [cursor=pointer]:
+              - /url: /product/glow-70mg
+              - img "Glow 70mg (R&D Only)" [ref=f14e127]
+              - generic [ref=f14e128]: Regenerative Blend
+            - generic [ref=f14e129]:
+              - generic [ref=f14e130]:
+                - heading [level=3] [ref=f14e131]:
+                  - link "Glow 70mg (R&D Only)" [ref=f14e132] [cursor=pointer]:
+                    - /url: /product/glow-70mg
+                - generic [ref=f14e133]: $100
+              - button "Add to cart" [ref=f14e134] [cursor=pointer]
+  - contentinfo [ref=f14e135]:
+    - generic [ref=f14e136]:
+      - generic [ref=f14e137]:
+        - generic [ref=f14e139]:
+          - paragraph [ref=f14e140]: Navigate
+          - list [ref=f14e141]:
+            - listitem [ref=f14e142]:
+              - button "About Us" [ref=f14e143] [cursor=pointer]
+            - listitem [ref=f14e144]:
+              - button "Shop" [ref=f14e145] [cursor=pointer]
+            - listitem [ref=f14e146]:
+              - button "Why Us" [ref=f14e147] [cursor=pointer]
+            - listitem [ref=f14e148]:
+              - button "Contact" [ref=f14e149] [cursor=pointer]
+        - generic [ref=f14e150]:
+          - paragraph [ref=f14e151]: Legal
+          - list [ref=f14e152]:
+            - listitem [ref=f14e153]:
+              - link "Press Release" [ref=f14e154] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f14e155]:
+              - link "Refund Policy" [ref=f14e156] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f14e157]:
+              - link "Shipping Policy" [ref=f14e158] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f14e159]:
+              - link "Privacy Policy" [ref=f14e160] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f14e161]:
+              - link "Terms of Service" [ref=f14e162] [cursor=pointer]:
+                - /url: "#"
+      - heading "LUMIVEX" [level=2] [ref=f14e164]
+      - generic [ref=f14e165]:
+        - paragraph [ref=f14e166]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f14e167]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f14e168] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f14e176] [cursor=pointer]

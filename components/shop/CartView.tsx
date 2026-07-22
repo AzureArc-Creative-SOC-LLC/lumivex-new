@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart, formatPrice } from '@/components/providers/CartProvider';
-
-const SHIPPING = 12; // Flat cold-chain dispatch fee (GBP).
+import { CHECKOUT_ACKNOWLEDGEMENT } from '@/lib/data';
 
 export default function CartView() {
   const { items, subtotal, count, updateQty, removeItem, clear } = useCart();
@@ -30,7 +29,7 @@ export default function CartView() {
           Your cart is empty
         </h1>
         <p className="mt-4 max-w-sm text-base font-light text-charcoal/55">
-          Explore our catalogue of high-purity research compounds, each shipped
+          Explore our catalogue of high-purity research compounds, each supplied
           with full documentation.
         </p>
         <Link
@@ -160,27 +159,28 @@ export default function CartView() {
               <Row label={`Subtotal (${count} item${count === 1 ? '' : 's'})`}>
                 {formatPrice(subtotal)}
               </Row>
-              <Row label="Shipping — cold-chain dispatch">
-                {formatPrice(SHIPPING)}
-              </Row>
               <div className="border-t border-charcoal/10 pt-4">
                 <div className="flex items-baseline justify-between">
                   <span className="text-base font-medium text-charcoal">
                     Total
                   </span>
                   <span className="text-2xl font-light text-charcoal">
-                    {formatPrice(subtotal + SHIPPING)}
+                    {formatPrice(subtotal)}
                   </span>
                 </div>
                 <p className="mt-1 text-right text-[11px] uppercase tracking-wider text-charcoal/40">
-                  GBP · tax included
+                  USD · tax included
                 </p>
               </div>
             </div>
 
+            <p className="mt-6 rounded-[4px] border-l-2 border-gold bg-ivory px-4 py-3 text-[11.5px] font-light leading-relaxed text-charcoal/60">
+              {CHECKOUT_ACKNOWLEDGEMENT}
+            </p>
+
             <Link
               href="/checkout"
-              className="mt-8 block w-full rounded-full bg-charcoal py-4 text-center text-sm font-medium text-ivory transition-colors duration-500 hover:bg-gold"
+              className="mt-6 block w-full rounded-full bg-charcoal py-4 text-center text-sm font-medium text-ivory transition-colors duration-500 hover:bg-gold"
             >
               Proceed to checkout
             </Link>

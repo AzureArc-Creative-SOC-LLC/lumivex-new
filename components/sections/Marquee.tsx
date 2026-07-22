@@ -8,9 +8,9 @@ const WORDS = [
   'Research-Grade',
   'Batch-Tested',
   'Fully Traceable',
-  'ISO Clean-Room',
-  'Cold-Chain Verified',
-  '99.95% Purity',
+  'Third-Party Analysed',
+  'Certificate of Analysis',
+  'Research Use Only',
 ];
 
 export default function Marquee() {

@@ -6,16 +6,18 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useCart, formatPrice } from '@/components/providers/CartProvider';
+import { CHECKOUT_ACKNOWLEDGEMENT } from '@/lib/data';
 import { orders, promos, ApiError } from '@/lib/api';
 
 type Status = 'idle' | 'processing' | 'done';
 
-const SHIPPING = 12; // Flat cold-chain dispatch fee (GBP).
 
 export default function CheckoutView() {
   const { items, subtotal, count, clear } = useCart();
   const router = useRouter();
   const [status, setStatus] = useState<Status>('idle');
+  // Research-use attestation — blocks submission until acknowledged.
+  const [attested, setAttested] = useState(false);
   const [orderRef, setOrderRef] = useState('');
   // Snapshot of the total at time of order, so the success popup keeps
   // showing the right amount after we clear the cart.
@@ -34,7 +36,7 @@ export default function CheckoutView() {
   const discount = appliedPromo
     ? Math.round(subtotal * (appliedPromo.percent / 100))
     : 0;
-  const total = Math.max(0, subtotal + (count > 0 ? SHIPPING : 0) - discount);
+  const total = Math.max(0, subtotal - discount);
 
   const applyPromo = async () => {
     const code = promoInput.trim().toUpperCase();
@@ -72,6 +74,12 @@ export default function CheckoutView() {
     const email = String(fd.get('email') ?? '').trim();
     if (!email.includes('@')) {
       setSubmitError('Please enter a valid email address.');
+      return;
+    }
+    if (!attested) {
+      setSubmitError(
+        'Please confirm the research-use acknowledgement before placing your order.'
+      );
       return;
     }
 
@@ -131,7 +139,7 @@ export default function CheckoutView() {
                   };
                 }),
                 subtotal: Number(o.subtotal ?? subtotal),
-                shipping: count > 0 ? SHIPPING : 0,
+                shipping: 0,
                 tax: 0,
                 discount: Number(o.discount_amount ?? discount),
                 total: Number(o.total ?? total),
@@ -225,7 +233,7 @@ export default function CheckoutView() {
             />
           </Fieldset>
 
-          <Fieldset title="Shipping address">
+          <Fieldset title="Billing address">
             <Field
               label="Address line 1"
               name="line1"
@@ -354,12 +362,6 @@ export default function CheckoutView() {
                   {formatPrice(subtotal)}
                 </span>
               </div>
-              <div className="flex justify-between text-sm font-light text-charcoal/55">
-                <span>Shipping</span>
-                <span className="font-medium text-charcoal">
-                  {formatPrice(SHIPPING)}
-                </span>
-              </div>
               {discount > 0 && (
                 <div className="flex justify-between text-sm font-light text-gold">
                   <span>Discount ({appliedPromo?.code})</span>
@@ -376,6 +378,27 @@ export default function CheckoutView() {
               </div>
             </div>
 
+            {/* Research-use compliance notice + blocking attestation */}
+            <div className="mt-7 rounded-[4px] border-l-2 border-gold bg-ivory px-4 py-4">
+              <p className="text-[11.5px] font-light leading-relaxed text-charcoal/60">
+                {CHECKOUT_ACKNOWLEDGEMENT}
+              </p>
+              <label className="mt-3 flex items-start gap-2.5 text-[12px] font-light leading-relaxed text-charcoal/70">
+                <input
+                  type="checkbox"
+                  checked={attested}
+                  onChange={(e) => setAttested(e.target.checked)}
+                  className="mt-0.5 shrink-0 accent-gold"
+                />
+                <span>
+                  I confirm I am 18 or older, am acquiring these materials for
+                  laboratory research purposes only, will not administer them to
+                  humans or animals, and accept sole responsibility for lawful
+                  handling, storage and disposal.
+                </span>
+              </label>
+            </div>
+
             {submitError && (
               <p className="mt-5 rounded-[4px] border border-red-600/20 bg-red-600/5 px-4 py-3 text-[13px] font-light text-red-600/90">
                 {submitError}
@@ -385,7 +408,7 @@ export default function CheckoutView() {
             <button
               type="submit"
               data-touch-target
-              disabled={status === 'processing'}
+              disabled={status === 'processing' || !attested}
               className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-charcoal py-4 text-sm font-medium text-ivory transition-colors duration-500 hover:bg-gold disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'processing' ? (
@@ -458,7 +481,7 @@ export default function CheckoutView() {
                 Order placed
               </h2>
               <p className="mt-3 text-sm font-light leading-relaxed text-charcoal/60">
-                Thank you. Check your inbox — we’ve sent payment instructions
+                Thank you. Check your inbox  we’ve sent payment instructions
                 and a secure capture link for you to upload your bank-transfer
                 screenshot.
               </p>

@@ -66,7 +66,7 @@ export default function Contact() {
       <div className="container-wide">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
           <div className="lg:col-span-5">
-            <span className="eyebrow">Wholesale & Enquiries</span>
+            <span className="eyebrow"></span>
             <RevealText
               as="h2"
               split="lines"
@@ -98,18 +98,10 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-wider text-charcoal/40">
-                  Dispatch
-                </p>
-                <p className="mt-1 text-lg font-light text-charcoal">
-                  Fast dispatch across the United Kingdom & EU
-                </p>
-              </div>
-              <div>
-                <p className="text-[11px] uppercase tracking-wider text-charcoal/40">
                   Compliance
                 </p>
                 <p className="mt-1 text-sm font-light leading-relaxed text-charcoal/55">
-                  Research use only — not for human or veterinary consumption.
+                  Research use only  not for human or veterinary consumption.
                 </p>
               </div>
             </div>

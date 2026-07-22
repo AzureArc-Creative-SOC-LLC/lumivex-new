@@ -128,6 +128,6 @@ export function useCart() {
   return ctx;
 }
 
-/** Formats a GBP amount, e.g. 1240 → "£1,240". */
+/** Formats a USD amount, e.g. 1240 → "$1,240". */
 export const formatPrice = (value: number) =>
-  `£${value.toLocaleString('en-GB')}`;
+  `$${value.toLocaleString('en-US')}`;

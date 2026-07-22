@@ -1,4 +1,4 @@
-// Returns local image paths as-is; builds an Unsplash URL only for bare IDs.
+﻿// Returns local image paths as-is; builds an Unsplash URL only for bare IDs.
 export const img = (src: string, w = 1600) =>
   src.startsWith('/') || src.startsWith('http')
     ? src
@@ -17,6 +17,16 @@ export const IMAGES = {
   texture: '/images/inhouse-img3-seo.webp',
 };
 
+/**
+ * Single source of truth for the research-only disclaimer. Rendered on every
+ * product page and in the checkout flow — never edit in one place only.
+ */
+export const RESEARCH_DISCLAIMER =
+  'FOR RESEARCH PURPOSES ONLY. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease. Products are supplied strictly for laboratory and analytical research conducted by qualified professionals.';
+
+export const CHECKOUT_ACKNOWLEDGEMENT =
+  'By proceeding with this purchase, you acknowledge that these products are intended solely for laboratory research purposes and are not intended for human or veterinary use. These products are not intended to diagnose, treat, cure, or prevent any disease.';
+
 export const ANNOUNCEMENTS = [
   'RESEARCH USE ONLY — NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only.',
   'OFFICIAL SITE: Beware of scam sites. Lumivex has never operated on any social media platforms.',
@@ -28,7 +38,7 @@ export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Shop', href: '#products' },
   { label: 'Why Us', href: '#why-us' },
-  { label: 'Voices', href: '#testimonials' },
+  { label: 'Standards', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -39,11 +49,12 @@ export type Product = {
   tag: string;
   category: string;
   description: string;
-  /** Display price, e.g. "£100". */
+  /** Display price, e.g. "$100". */
   price: string;
-  /** Numeric price in GBP, used for cart maths. */
+  /** Numeric price in USD, used for cart maths. */
   priceValue: number;
-  purity: string;
+  /** Assayed purity — set only where a third-party report states one. */
+  purity?: string;
   image: string;
   /** Optional additional gallery shots shown as thumbnails on the detail page. */
   gallery?: string[];
@@ -53,6 +64,22 @@ export type Product = {
   specs: { label: string; value: string }[];
   /** Short bullet highlights. */
   highlights: string[];
+  /** Kit contents and storage blocks shown on the product page. */
+  details?: {
+    contents?: string;
+    storage?: string;
+  };
+  /** Janoshik third-party test data — enables the certificate modal. */
+  janoshik?: {
+    fillVolume?: string;
+    batchNumber?: string;
+    purity?: string;
+    compounds?: { name: string; concentration: string; content: string }[];
+    /** External verification link (janoshik.com). */
+    verifyUrl?: string;
+    /** Local certificate images displayed inside the modal. */
+    certificateImages?: string[];
+  };
 };
 
 export const PRODUCTS: Product[] = [
@@ -64,9 +91,9 @@ export const PRODUCTS: Product[] = [
     category: 'GIP / GLP-1 Research',
     description:
       'A dual GIP and GLP-1 receptor agonist supplied for in vitro metabolic and receptor-signalling research.',
-    price: '£100',
+    price: '$100',
     priceValue: 100,
-    purity: '99.95%',
+    purity: '99.85%',
     image: '/products/tirzepatide.jpg',
     gallery: [
       '/images/tirzepetide/Artboard2.jpg',
@@ -75,19 +102,47 @@ export const PRODUCTS: Product[] = [
       '/images/tirzepetide/trizyuv.jpg',
     ],
     longDescription:
-      'Tirzepatide is a dual GIP and GLP-1 receptor agonist supplied as a lyophilised powder for in vitro metabolic and receptor-signalling research. Each vial is synthesised in-house under ISO clean-room conditions, batch-tested by HPLC and mass spectrometry, and dispatched with a full certificate of analysis. Intended strictly for laboratory research — not for human or veterinary use.',
+      'A 40mg Tirzepatide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.',
     specs: [
       { label: 'CAS Number', value: '2023788-19-2' },
       { label: 'Molecular Formula', value: 'C₂₂₅H₃₄₈N₄₈O₆₈' },
-      { label: 'Quantity', value: '40mg per vial' },
-      { label: 'Form', value: 'Lyophilised powder' },
-      { label: 'Storage', value: '−20°C, desiccated' },
+      { label: 'Quantity', value: '40mg per research pen' },
+      { label: 'Fill Volume', value: '3 mL' },
+      { label: 'Batch Number', value: 'TR786PAOS' },
+      { label: 'Form', value: 'Pre-filled research pen' },
+      { label: 'Storage', value: '2–8°C refrigerated (do not freeze)' },
     ],
     highlights: [
-      'HPLC + mass-spec verified',
+      'Janoshik third-party tested',
       'Certificate of analysis included',
-      'Cold-chain dispatch',
+      'Batch-level purity data',
     ],
+    details: {
+      contents:
+        'Each Tirzepatide 40mg Research kit includes:\nPre-filled Research pen (40mg Tirzepatide)\nResearch information sheet',
+      storage:
+        'Store refrigerated (2–8°C). Do not freeze.\nSupplied in fixed-volume sealed format for laboratory analysis.',
+    },
+    janoshik: {
+      fillVolume: '3 mL',
+      batchNumber: 'TR786PAOS',
+      purity: '99.85%',
+      compounds: [
+        {
+          name: 'Tirzepatide',
+          concentration: '13.35 mg/mL',
+          content: '40.05 mg',
+        },
+      ],
+      verifyUrl:
+        'https://verify.janoshik.com/tests/147174-ALLUVI_TIRZEPATIDE_40MG_KIT_T5MBWRAYD4HN',
+      certificateImages: [
+        '/images/tirzepetide/certificate/report.png',
+        '/images/tirzepetide/certificate/coa-1.jpg',
+        '/images/tirzepetide/certificate/coa-2.jpg',
+        '/images/tirzepetide/certificate/coa-3.jpg',
+      ],
+    },
   },
   {
     id: 'retatrutide-20',
@@ -97,9 +152,9 @@ export const PRODUCTS: Product[] = [
     category: 'Triple Agonist Research',
     description:
       'A triple GIP/GLP-1/glucagon receptor agonist for advanced metabolic pathway studies in controlled laboratory settings.',
-    price: '£100',
+    price: '$100',
     priceValue: 100,
-    purity: '99.95%',
+    purity: '99.21%',
     image: '/products/retatrutide-20.jpg',
     gallery: [
       '/images/retatwenty/retafront.jpeg',
@@ -108,19 +163,46 @@ export const PRODUCTS: Product[] = [
       '/images/retatwenty/retatwentyuv.jpg',
     ],
     longDescription:
-      'Retatrutide is a triple GIP / GLP-1 / glucagon receptor agonist developed for advanced metabolic pathway studies. This 20mg presentation is formulated for standard in vitro assay protocols and supplied with documented chain of custody. Synthesised, filled, and verified under controlled laboratory conditions. Research use only.',
+      'A 20mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.',
     specs: [
       { label: 'CAS Number', value: '2381089-83-2' },
       { label: 'Molecular Formula', value: 'C₂₂₁H₃₄₂N₄₆O₆₈' },
-      { label: 'Quantity', value: '20mg per vial' },
-      { label: 'Form', value: 'Lyophilised powder' },
-      { label: 'Storage', value: '−20°C, desiccated' },
+      { label: 'Quantity', value: '20mg per research pen' },
+      { label: 'Fill Volume', value: '2.4 mL' },
+      { label: 'Batch Number', value: 'AR1721TRT' },
+      { label: 'Form', value: 'Pre-filled research pen' },
+      { label: 'Storage', value: '2–8°C refrigerated (do not freeze)' },
     ],
     highlights: [
       'Triple-receptor agonist',
-      'Documented chain of custody',
+      'Janoshik third-party tested',
       'Batch-level purity data',
     ],
+    details: {
+      contents:
+        'Each Retatrutide 20mg Research kit includes:\nPre-filled Research pen (20mg Retatrutide)\nResearch information sheet',
+      storage:
+        'Store refrigerated (2–8°C). Do not freeze.\nSupplied in fixed-volume sealed format for laboratory analysis.',
+    },
+    janoshik: {
+      fillVolume: '2.4 mL',
+      batchNumber: 'AR1721TRT',
+      purity: '99.21%',
+      compounds: [
+        {
+          name: 'Retatrutide',
+          concentration: '9.57 mg/mL',
+          content: '22.96 mg',
+        },
+      ],
+      verifyUrl:
+        'https://verify.janoshik.com/tests/163215-ALLUVI_RETATRUTIDE_20MG_KIT_GBHEFN58JXXZ',
+      certificateImages: [
+        '/images/retatwenty/certificate/report.png',
+        '/images/retatwenty/certificate/coa-1.jpg',
+        '/images/retatwenty/certificate/coa-2.jpg',
+      ],
+    },
   },
   {
     id: 'retatrutide-40',
@@ -130,9 +212,9 @@ export const PRODUCTS: Product[] = [
     category: 'Triple Agonist Research',
     description:
       'Higher-concentration triple-receptor agonist formulated for extended in vitro research protocols and comparative assays.',
-    price: '£180',
+    price: '$180',
     priceValue: 180,
-    purity: '99.95%',
+    purity: '99.269%',
     image: '/products/retatrutide-40.jpg',
     gallery: [
       '/images/retafourty/retafrontnew.jpg',
@@ -141,31 +223,57 @@ export const PRODUCTS: Product[] = [
       '/images/retafourty/retauv.jpg',
     ],
     longDescription:
-      'This higher-concentration 40mg presentation of Retatrutide is formulated for extended in vitro research protocols and comparative assays where larger quantities are required. A triple GIP / GLP-1 / glucagon receptor agonist manufactured in-house with full traceability and tamper-evident labelling. Intended strictly for laboratory research.',
+      'A 40mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.',
     specs: [
       { label: 'CAS Number', value: '2381089-83-2' },
       { label: 'Molecular Formula', value: 'C₂₂₁H₃₄₂N₄₆O₆₈' },
-      { label: 'Quantity', value: '40mg per vial' },
-      { label: 'Form', value: 'Lyophilised powder' },
-      { label: 'Storage', value: '−20°C, desiccated' },
+      { label: 'Quantity', value: '40mg per research pen' },
+      { label: 'Fill Volume', value: '2.4 mL' },
+      { label: 'Batch Number', value: 'AR1739JAT' },
+      { label: 'Form', value: 'Pre-filled research pen' },
+      { label: 'Storage', value: '2–8°C refrigerated (do not freeze)' },
     ],
     highlights: [
       'Extended-protocol quantity',
-      'Tamper-evident labelling',
+      'Janoshik third-party tested',
       'Full traceability',
     ],
+    details: {
+      contents:
+        'Each Retatrutide 40mg Research kit includes:\nPre-filled Research pen (40mg Retatrutide)\nResearch information sheet',
+      storage:
+        'Store refrigerated (2–8°C). Do not freeze.\nSupplied in fixed-volume sealed format for laboratory analysis.',
+    },
+    janoshik: {
+      fillVolume: '2.4 mL',
+      batchNumber: 'AR1739JAT',
+      purity: '99.269%',
+      compounds: [
+        {
+          name: 'Retatrutide',
+          concentration: '18.22 mg/mL',
+          content: '43.72 mg',
+        },
+      ],
+      verifyUrl:
+        'https://verify.janoshik.com/tests/163216-ALLUVI_RETATRUTIDE_40MG_KIT_TU3SQLQB9ZDQ',
+      certificateImages: [
+        '/images/retafourty/certificate/report.png',
+        '/images/retafourty/certificate/coa-1.jpg',
+        '/images/retafourty/certificate/coa-2.jpg',
+      ],
+    },
   },
   {
     id: 'glow-70',
     slug: 'glow-70mg',
-    name: 'Glow 70mg',
+    name: 'GHK-Cu · BPC-157 · TB-500 Blend 70mg',
     tag: 'R&D Only',
-    category: 'Regenerative Blend',
+    category: 'Multi-Compound Research Blend',
     description:
-      'A research blend formulated for dermal and connective-tissue signalling studies under controlled laboratory conditions.',
-    price: '£100',
+      'A 70mg three-compound reference blend of GHK-Cu, BPC-157 and TB-500 supplied in a sealed pre-filled research device for controlled laboratory R&D applications.',
+    price: '$100',
     priceValue: 100,
-    purity: '99.95%',
     image: '/products/glow.jpg',
     gallery: [
       '/images/glow/glowfrontnew.jpg',
@@ -174,31 +282,52 @@ export const PRODUCTS: Product[] = [
       '/images/glow/glowuv.jpg',
     ],
     longDescription:
-      'Glow is a research blend formulated for dermal and connective-tissue signalling studies under controlled laboratory conditions. Each 70mg vial is filled on ISO-certified lines for precise dosing accuracy and sterility, and ships with verified purity documentation. For laboratory research use only.',
+      'A 70mg three-compound reference blend supplied in a sealed pre-filled research device, provided exclusively for controlled laboratory R&D applications. Supplied in fixed-volume sealed format to support compound stability analysis, formulation studies, and analytical method development. This material is used solely for in vitro experiments and may not be (1) used in clinical trials involving humans, (2) administered to humans or animals as part of an experiment or investigation, or (3) supplied to another party for human investigational use.',
     specs: [
-      { label: 'Composition', value: 'Regenerative peptide blend' },
-      { label: 'Quantity', value: '70mg per vial' },
-      { label: 'Form', value: 'Lyophilised powder' },
-      { label: 'Storage', value: '−20°C, desiccated' },
-      { label: 'Application', value: 'Dermal signalling research' },
+      { label: 'Composition', value: 'GHK-Cu + BPC-157 + TB-500' },
+      { label: 'Total Contents', value: '10mg BPC-157, 10mg TB-500, 50mg GHK-Cu' },
+      { label: 'Fill Volume', value: '3.4 mL' },
+      { label: 'Batch Number', value: 'GL0621XSA' },
+      { label: 'Form', value: 'Pre-filled research pen' },
+      { label: 'Storage', value: '2–8°C refrigerated (do not freeze)' },
     ],
     highlights: [
-      'ISO-certified filling',
-      'Verified purity',
-      'Sterile presentation',
+      'Janoshik third-party tested',
+      'Verified compound content',
     ],
+    details: {
+      contents:
+        'Each 70mg blend research kit includes:\n2 × Pre-filled Research pens (Each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu)\n\nTotal contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu',
+      storage:
+        'Store refrigerated (2–8°C). Do not freeze.\nSupplied in fixed-volume sealed format for laboratory analysis.',
+    },
+    janoshik: {
+      fillVolume: '3.4 mL',
+      batchNumber: 'GL0621XSA',
+      compounds: [
+        { name: 'GHK-Cu', concentration: '7.59 mg/mL', content: '25.8 mg' },
+        { name: 'BPC-157', concentration: '2.39 mg/mL', content: '8.13 mg' },
+        { name: 'TB-500', concentration: '1.99 mg/mL', content: '6.76 mg' },
+      ],
+      verifyUrl:
+        'https://verify.janoshik.com/tests/163217-ALLUVI_GLOW_70MG_KIT_DCL3AJSE4JQP',
+      certificateImages: [
+        '/images/glow/certificate/report.png',
+        '/images/glow/certificate/coa-1.jpg',
+        '/images/glow/certificate/coa-2.jpg',
+      ],
+    },
   },
   {
     id: 'bpc-tb-40',
     slug: 'bpc-157-tb-500-40mg',
     name: 'BPC-157 & TB-500 40mg',
     tag: 'R&D Only',
-    category: 'Recovery Blend',
+    category: 'Peptide Blend — Research',
     description:
-      'A combined pentadecapeptide and actin-regulating peptide blend for tissue-repair and angiogenesis research.',
-    price: '£130',
+      'A combined pentadecapeptide and actin-regulating peptide reference blend supplied for in vitro cell-signalling and angiogenesis assay work.',
+    price: '$130',
     priceValue: 130,
-    purity: '99.95%',
     image: '/products/bpc.jpg',
     gallery: [
       '/images/bpc/bpcfrontnew.jpg',
@@ -207,31 +336,52 @@ export const PRODUCTS: Product[] = [
       '/images/bpc/uvbpc.jpg',
     ],
     longDescription:
-      'A combined pentadecapeptide (BPC-157) and actin-regulating peptide (TB-500) blend formulated for tissue-repair and angiogenesis research. The 40mg presentation supports comparative recovery-pathway studies in vitro. Manufactured in-house, batch-tested, and dispatched with a full certificate of analysis. Research use only.',
+      'A 40mg BPC-157 & TB-500 reference formulation supplied in a sealed pre-filled research device, provided exclusively for controlled laboratory R&D applications. Supplied in fixed-volume sealed format to support compound stability analysis, formulation studies, and analytical method development.',
     specs: [
       { label: 'Composition', value: 'BPC-157 + TB-500' },
-      { label: 'Quantity', value: '40mg per vial' },
-      { label: 'Form', value: 'Lyophilised powder' },
-      { label: 'Storage', value: '−20°C, desiccated' },
-      { label: 'Application', value: 'Tissue-repair research' },
+      { label: 'Total Contents', value: '20mg BPC-157, 20mg TB-500' },
+      { label: 'Fill Volume', value: '3 mL' },
+      { label: 'Batch Number', value: 'BP1701FSR' },
+      { label: 'Form', value: 'Pre-filled research pen' },
+      { label: 'Storage', value: '2–8°C refrigerated (do not freeze)' },
     ],
     highlights: [
-      'Dual-peptide blend',
-      'Certificate of analysis',
-      'Angiogenesis research grade',
+      'Dual-peptide reference blend',
+      'Janoshik third-party tested',
+      'Verified compound content',
     ],
+    details: {
+      contents:
+        'Each BPC-157 & TB-500 40mg Research kit includes:\nPre-filled Research pen (20mg BPC-157, 20mg TB-500)\nResearch information sheet',
+      storage:
+        'Store refrigerated (2–8°C). Do not freeze.\nSupplied in fixed-volume sealed format for laboratory analysis.',
+    },
+    janoshik: {
+      fillVolume: '3 mL',
+      batchNumber: 'BP1701FSR',
+      compounds: [
+        { name: 'BPC-157', concentration: '7.33 mg/mL', content: '21.99 mg' },
+        { name: 'TB-500', concentration: '6.53 mg/mL', content: '19.59 mg' },
+      ],
+      verifyUrl:
+        'https://verify.janoshik.com/tests/163218-ALLUVI_BPC157_TB500_40MG_KIT_EAI125ZEF8TB',
+      certificateImages: [
+        '/images/bpc/certificate/report.png',
+        '/images/bpc/certificate/coa-1.jpg',
+        '/images/bpc/certificate/coa-2.jpg',
+      ],
+    },
   },
   {
     id: 'nad-1000',
     slug: 'nad-plus-1000mg',
     name: 'NAD+ 1,000mg',
-    tag: 'R&D',
-    category: 'Cellular Longevity',
+    tag: 'R&D Only',
+    category: 'Cellular Metabolism Research',
     description:
-      'Nicotinamide adenine dinucleotide supplied for cellular metabolism, mitochondrial, and longevity research applications.',
-    price: '£140',
+      'Nicotinamide adenine dinucleotide supplied as a reference material for in vitro cellular metabolism and mitochondrial research.',
+    price: '$140',
     priceValue: 140,
-    purity: '99.95%',
     image: '/products/nad.jpg',
     gallery: [
       '/images/nad/nadfront.jpg',
@@ -240,19 +390,24 @@ export const PRODUCTS: Product[] = [
       '/images/nad/uvnad.jpg',
     ],
     longDescription:
-      'Nicotinamide adenine dinucleotide (NAD+) supplied at 1,000mg for cellular metabolism, mitochondrial, and longevity research applications. Manufactured under validated cold-chain conditions to keep the compound stable and compliant through delivery. Each unit is traceable with secure procurement logs. For laboratory research use only.',
+      'NAD+ (Nicotinamide Adenine Dinucleotide) reference formulation supplied for laboratory analysis and in vitro study only. Provided exclusively for controlled laboratory R&D applications in fixed-volume sealed format.',
     specs: [
       { label: 'CAS Number', value: '53-84-9' },
       { label: 'Molecular Formula', value: 'C₂₁H₂₇N₇O₁₄P₂' },
-      { label: 'Quantity', value: '1,000mg per vial' },
-      { label: 'Form', value: 'Lyophilised powder' },
-      { label: 'Storage', value: '−20°C, desiccated' },
+      { label: 'Total Contents', value: '1,000mg across 2 research pens' },
+      { label: 'Form', value: 'Pre-filled research pen' },
+      { label: 'Storage', value: '2–8°C refrigerated (do not freeze)' },
     ],
     highlights: [
-      'Validated cold-chain',
-      'Mitochondrial research grade',
+      'Validated cold-chain handling',
+      'Analytical reference material',
       'Secure procurement logs',
     ],
+    details: {
+      contents:
+        'Each NAD+ 1,000mg kit includes:\n2 × Pre-filled NAD+ pens (500mg each)\nResearch information sheet',
+      storage: 'Store refrigerated (2–8°C). Do not freeze.',
+    },
   },
 ];
 
@@ -287,12 +442,12 @@ export const WHY_US = [
   {
     no: '03',
     title: 'Precision Synthesis',
-    text: 'Research compounds are formulated, filled, and dispatched with precision timing and a documented chain of custody.',
+    text: 'Research compounds are formulated and filled with precision timing and a documented chain of custody.',
   },
   {
     no: '04',
     title: 'Automated Filling',
-    text: 'ISO-certified filling lines deliver precise dosing accuracy and sterility for laboratory applications.',
+    text: 'Automated filling lines deliver precise fill-volume accuracy and controlled-environment handling for laboratory materials.',
   },
   {
     no: '05',
@@ -302,34 +457,38 @@ export const WHY_US = [
   {
     no: '06',
     title: 'Cold-Chain Critical',
-    text: 'Validated cold-chain packaging keeps compounds stable and compliant during sensitive laboratory delivery.',
+    text: 'Validated cold-chain packaging and storage keep compounds stable and compliant for sensitive laboratory work.',
   },
 ];
 
 export const STATS = [
-  { value: '48', suffix: '+', label: 'Advanced formulations developed' },
-  { value: '26.3', suffix: 'k+', label: 'R&D-tested research units' },
-  { value: '99.95', suffix: '%', label: 'Lab-tested purity' },
+  { value: '6', suffix: '', label: 'Research formulations catalogued' },
+  { value: '100', suffix: '%', label: 'Batches supplied with a COA' },
+  { value: '99.2', suffix: '%+', label: 'Lowest assayed batch purity' },
 ];
 
+/**
+ * Supplier feedback. Compliance rule: comments may reference documentation,
+ * packaging, presentation and service only — never outcomes, effects or use.
+ */
 export const TESTIMONIALS = [
   {
     quote:
-      'Lumivex has eliminated the uncertainty of unverified vendors. The batch documentation and purity data are the most rigorous we have sourced in the UK.',
+      'Every consignment arrives with its batch documentation and a matching third-party certificate. The paperwork is the most complete we have received from a UK supplier.',
     author: 'Dr. Helena Voss',
     role: 'Principal Investigator, Zürich',
     image: '/images/testimonial1.webp',
   },
   {
     quote:
-      'Full traceability, ISO clean-room synthesis, and reliable cold-chain dispatch. This is what a compliant R&D supply chain should look like.',
+      'Sealed packaging, intact cold-chain, accurate order contents and traceable batch numbers throughout. Procurement and record-keeping are straightforward as a result.',
     author: 'Marcus Lindgren',
     role: 'Laboratory Director, Stockholm',
     image: '/images/testimonial2.webp',
   },
   {
     quote:
-      'The consistency across batches is extraordinary. Lumivex has become the only research-grade source our protocol trusts.',
+      'Certificates are published per batch and verifiable against the issuing laboratory. Presentation and labelling are consistent across every order we have placed.',
     author: 'Dr. Amara Okafor',
     role: 'Research Lead, London',
     image: '/images/testimonial-3.webp',
@@ -346,7 +505,6 @@ export const FOOTER_LINKS = {
   legal: [
     'Press Release',
     'Refund Policy',
-    'Shipping Policy',
     'Privacy Policy',
     'Terms of Service',
   ],

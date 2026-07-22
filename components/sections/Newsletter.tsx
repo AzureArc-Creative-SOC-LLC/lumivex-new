@@ -36,7 +36,7 @@ export default function Newsletter() {
         <p className="text-[13px] font-medium text-charcoal">
           {status === 'duplicate'
             ? 'You’re already on the list — thank you.'
-            : 'You’re in. Watch your inbox for the giveaway entry.'}
+            : 'You’re on the list — we’ll email new batch documentation as it’s published.'}
         </p>
       </div>
     );
@@ -83,7 +83,8 @@ export default function Newsletter() {
           required
         />
         <span>
-          I consent to receive emails about research compounds and giveaways.
+          I confirm I am a research professional and consent to receive
+          catalogue and documentation updates.
         </span>
       </label>
 

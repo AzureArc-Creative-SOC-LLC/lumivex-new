@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -29,8 +29,8 @@ export default function Products() {
             split="lines"
             className="max-w-sm text-base font-light leading-relaxed text-charcoal/55"
           >
-            Each compound ships with full documentation, batch traceability, and
-            verified purity. For laboratory research use only.
+            Each compound is supplied with full documentation, batch
+            traceability, and verified purity. For laboratory research use only.
           </RevealText>
         </div>
 
@@ -58,7 +58,7 @@ export default function Products() {
                   alt={product.name}
                   className="absolute inset-0 h-full w-full"
                   imgClassName="transition-transform duration-[1.2s] ease-lux group-hover:scale-[1.05]"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 639px) 100vw, 50vw"
                   curtain={false}
                   rounded={false}
                   oversize={0}
@@ -90,7 +90,7 @@ export default function Products() {
                       {product.price}
                     </span>
                     <span className="block text-[10px] uppercase tracking-wider text-charcoal/40">
-                      GBP
+                      USD
                     </span>
                   </span>
                 </div>
