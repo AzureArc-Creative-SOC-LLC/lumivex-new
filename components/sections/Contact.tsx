@@ -60,6 +60,7 @@ function FloatingField({
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   return (
     <section id="contact" className="relative bg-cream py-section">
@@ -112,6 +113,8 @@ export default function Contact() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setSubmitted(true);
+                setShowSuccess(true);
+                window.setTimeout(() => setShowSuccess(false), 4000);
               }}
               className="space-y-10"
             >
@@ -133,6 +136,44 @@ export default function Contact() {
               </button>
             </form>
           </FadeIn>
+        </div>
+      </div>
+
+      {/* Success toast */}
+      <div
+        role="status"
+        aria-live="polite"
+        className={`pointer-events-none fixed inset-x-0 bottom-6 z-[60] flex justify-center px-4 transition-all duration-500 ease-lux sm:justify-end sm:right-6 sm:px-0 ${
+          showSuccess ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+        }`}
+      >
+        <div className="pointer-events-auto flex items-center gap-3 rounded-full bg-charcoal px-5 py-3.5 text-ivory shadow-[0_20px_50px_-15px_rgba(28,26,23,0.5)]">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-3.5 w-3.5"
+              fill="none"
+              stroke="#1C1A17"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <p className="text-[13px] font-light text-ivory/90">
+            Enquiry sent — we&apos;ll be in touch within one business day.
+          </p>
+          <button
+            type="button"
+            onClick={() => setShowSuccess(false)}
+            aria-label="Dismiss"
+            className="ml-1 text-ivory/40 transition-colors hover:text-ivory"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

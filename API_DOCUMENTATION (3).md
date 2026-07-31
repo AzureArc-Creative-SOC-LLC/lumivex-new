@@ -81,7 +81,7 @@ Only two endpoints are rate-limited (per client IP):
 No other endpoints are throttled.
 
 ### Notes
-- Currency is always **GBP** server-side.
+- Currency is always **USD** server-side.
 - Client IP is derived from proxy headers server-side; never send it yourself.
 - There is no global 404/error handler — unmatched routes return Express's default 404 HTML.
 
@@ -339,7 +339,7 @@ Alias: `POST /api/user-orders/`. **Auth:** none.
 
 *Items* — send **either**:
 1. `itemsArray` — JSON array of item objects (preferred; JSON-stringify it under multipart), or
-2. `items` / `itemsText` — string `"Name xQTY @ £PRICE | Name2 xQTY @ £PRICE"`.
+2. `items` / `itemsText` — string `"Name xQTY @ $PRICE | Name2 xQTY @ $PRICE"`.
 
 Item object shape:
 | Field | Required | Notes / aliases |
@@ -508,7 +508,7 @@ JSON body:
 |---|---|---|
 | `orderId` | ✅ | matched against `order_number` |
 | `amount` | ✅ | `Number(amount)`; may be overridden by credit logic |
-| `currency` | — | default `GBP` |
+| `currency` | — | default `USD` |
 
 Customer details are read from the stored order, not the body.
 
@@ -547,7 +547,7 @@ Re-checks status against Klyme and updates the order. Call from the callback pag
 {
   "ok": true,
   "session": { "uuid": "f7c2a9e1-...", "status": "success", "orderId": 12345 },
-  "payment": { "status": "success", "finalStatus": "PAYMENT_COMPLETE", "amount": "19.99", "currency": "GBP" },
+  "payment": { "status": "success", "finalStatus": "PAYMENT_COMPLETE", "amount": "19.99", "currency": "USD" },
   "klyme": { /* raw Klyme status, or null */ }
 }
 ```
@@ -571,7 +571,7 @@ Alias: `/api/user-orders/aabanpay/create-payment`. JSON body:
 |---|---|---|
 | `orderId` | ✅ | matched against `order_number` |
 | `amount` | ✅ | `Number(amount).toFixed(2)` |
-| `currency` | — | default `GBP` |
+| `currency` | — | default `USD` |
 | `returnUrl` | — | default `${FRONTEND_URL}/checkout/aabanpay-callback?status=success` |
 | `cancelUrl` | — | default `${FRONTEND_URL}/checkout/aabanpay-callback?status=cancelled` |
 
@@ -637,7 +637,7 @@ Browser redirect target after 3DS. Returns **HTTP 302 redirects, not JSON.** Que
 
 | Provider status | Redirect target |
 |---|---|
-| approved/success/completed | `${FRONTEND_URL}/payment-completed?order=<id>&amount=<£total currency>` |
+| approved/success/completed | `${FRONTEND_URL}/payment-completed?order=<id>&amount=<$total currency>` |
 | declined/failed/rejected/cancelled | `${FRONTEND_URL}/payment-review?order=<id>&amount=...&reason=<reason>` |
 | other | `${FRONTEND_URL}/payment-review?order=<id>&amount=...&reason=Payment status: <status>` |
 

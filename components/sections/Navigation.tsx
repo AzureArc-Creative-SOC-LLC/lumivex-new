@@ -23,9 +23,9 @@ export default function Navigation() {
   }, []);
 
   useEffect(() => {
-    const sections = NAV_LINKS.map((l) =>
-      document.querySelector(l.href)
-    ).filter(Boolean) as HTMLElement[];
+    const sections = NAV_LINKS.filter((l) => l.href.startsWith('#'))
+      .map((l) => document.querySelector(l.href))
+      .filter(Boolean) as HTMLElement[];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -67,14 +67,26 @@ export default function Navigation() {
           <ul className="hidden items-center gap-9 lg:flex">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <button
-                  onClick={() => go(link.href)}
-                  className={`link-underline text-[13px] font-medium tracking-wide transition-colors duration-500 ${
-                    active === link.href ? 'is-active' : ''
-                  } ${scrolled ? 'text-charcoal/80 hover:text-charcoal' : 'text-ivory/80 hover:text-ivory'}`}
-                >
-                  {link.label}
-                </button>
+                {link.href.startsWith('#') ? (
+                  <button
+                    onClick={() => go(link.href)}
+                    className={`link-underline text-[13px] font-medium tracking-wide transition-colors duration-500 ${
+                      active === link.href ? 'is-active' : ''
+                    } ${scrolled ? 'text-charcoal/80 hover:text-charcoal' : 'text-ivory/80 hover:text-ivory'}`}
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`link-underline text-[13px] font-medium tracking-wide transition-colors duration-500 ${
+                      scrolled ? 'text-charcoal/80 hover:text-charcoal' : 'text-ivory/80 hover:text-ivory'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -90,16 +102,16 @@ export default function Navigation() {
             </Link>
             <CartButton dark={scrolled} />
             <Magnetic strength={0.4} className="inline-block">
-              <button
-                onClick={() => go('#products')}
-                className={`rounded-full px-6 py-2.5 text-[13px] font-medium transition-all duration-500 ${
+              <Link
+                href="/shop"
+                className={`inline-block rounded-full px-6 py-2.5 text-[13px] font-medium transition-all duration-500 ${
                   scrolled
                     ? 'bg-charcoal text-ivory hover:bg-gold'
                     : 'border border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal'
                 }`}
               >
                 Shop Now
-              </button>
+              </Link>
             </Magnetic>
           </div>
 
@@ -140,20 +152,38 @@ export default function Navigation() {
         <ul className="flex flex-col gap-1">
           {NAV_LINKS.map((link, i) => (
             <li key={link.href}>
-              <button
-                data-touch-target
-                onClick={() => go(link.href)}
-                className="block w-full py-2 text-left text-[clamp(2rem,11vw,2.75rem)] font-light tracking-tightest text-charcoal transition-colors hover:text-gold"
-                style={{
-                  transitionDelay: menuOpen ? `${i * 60}ms` : '0ms',
-                  transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
-                  opacity: menuOpen ? 1 : 0,
-                  transitionProperty: 'transform, opacity, color',
-                  transitionDuration: '600ms',
-                }}
-              >
-                {link.label}
-              </button>
+              {link.href.startsWith('#') ? (
+                <button
+                  data-touch-target
+                  onClick={() => go(link.href)}
+                  className="block w-full py-2 text-left text-[clamp(2rem,11vw,2.75rem)] font-light tracking-tightest text-charcoal transition-colors hover:text-gold"
+                  style={{
+                    transitionDelay: menuOpen ? `${i * 60}ms` : '0ms',
+                    transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
+                    opacity: menuOpen ? 1 : 0,
+                    transitionProperty: 'transform, opacity, color',
+                    transitionDuration: '600ms',
+                  }}
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <Link
+                  data-touch-target
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block w-full py-2 text-left text-[clamp(2rem,11vw,2.75rem)] font-light tracking-tightest text-charcoal transition-colors hover:text-gold"
+                  style={{
+                    transitionDelay: menuOpen ? `${i * 60}ms` : '0ms',
+                    transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
+                    opacity: menuOpen ? 1 : 0,
+                    transitionProperty: 'transform, opacity, color',
+                    transitionDuration: '600ms',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -167,13 +197,14 @@ export default function Navigation() {
             transitionDuration: '600ms',
           }}
         >
-          <button
+          <Link
             data-touch-target
-            onClick={() => go('#products')}
+            href="/shop"
+            onClick={() => setMenuOpen(false)}
             className="rounded-full bg-charcoal px-8 py-4 text-sm font-medium text-ivory transition-colors hover:bg-gold"
           >
             Shop Now
-          </button>
+          </Link>
           <Link
             data-touch-target
             href="/cart"

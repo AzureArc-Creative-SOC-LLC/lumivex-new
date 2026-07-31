@@ -36,7 +36,6 @@ export const ANNOUNCEMENTS = [
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Shop', href: '#products' },
   { label: 'Why Us', href: '#why-us' },
   { label: 'Standards', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
@@ -267,7 +266,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'glow-70',
     slug: 'glow-70mg',
-    name: 'GHK-Cu · BPC-157 · TB-500 Blend 70mg',
+    name: 'Glow 70mg',
     tag: 'R&D Only',
     category: 'Multi-Compound Research Blend',
     description:
@@ -498,14 +497,15 @@ export const TESTIMONIALS = [
 export const FOOTER_LINKS = {
   navigate: [
     { label: 'About Us', href: '#about' },
-    { label: 'Shop', href: '#products' },
+    { label: 'Shop', href: '/shop' },
     { label: 'Why Us', href: '#why-us' },
     { label: 'Contact', href: '#contact' },
   ],
   legal: [
-    'Press Release',
-    'Refund Policy',
-    'Privacy Policy',
-    'Terms of Service',
+    { label: 'Press Release', href: '/press-release' },
+    { label: 'Refund Policy', href: '/refund-policy' },
+    { label: 'Shipping Policy', href: '/shipping-policy' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Service', href: '/terms-of-service' },
   ],
 };

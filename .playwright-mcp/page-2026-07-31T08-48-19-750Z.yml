@@ -1,0 +1,8 @@
+- generic [ref=f6e2]:
+  - status "Important notice" [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - generic [ref=f6e5]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+      - generic [ref=f6e6]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+  - status "Loading" [ref=f6e8]
+  - link "Join Our Community" [ref=f6e10] [cursor=pointer]:
+    - /url: https://t.me/joinalluvimembers

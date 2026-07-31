@@ -1,0 +1,209 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - link "Lumivex home" [ref=f7e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f7e5]: LUMIVEX
+      - navigation [ref=f7e10]:
+        - link "Continue shopping" [ref=f7e11] [cursor=pointer]:
+          - /url: /shop
+        - link "Cart, 0 items" [ref=f7e12] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f7e16]:
+    - generic [ref=f7e18]:
+      - text: The Catalogue
+      - heading "Research compounds, supplied with full traceability." [level=1] [ref=f7e19]
+      - paragraph [ref=f7e20]: Every batch is manufactured in-house, third-party tested, and shipped cold-chain with a matching certificate of analysis. Filter the range below or search for a specific compound.
+      - generic [ref=f7e21]:
+        - generic [ref=f7e22]:
+          - paragraph [ref=f7e23]: "6"
+          - paragraph [ref=f7e24]: Research formulations catalogued
+        - generic [ref=f7e25]:
+          - paragraph [ref=f7e26]: 100%
+          - paragraph [ref=f7e27]: Batches supplied with a COA
+        - generic [ref=f7e28]:
+          - paragraph [ref=f7e29]: 99.2%+
+          - paragraph [ref=f7e30]: Lowest assayed batch purity
+    - generic [ref=f7e33]:
+      - generic [ref=f7e34]:
+        - generic [ref=f7e35]:
+          - textbox "Search the catalogue…" [ref=f7e37]
+          - generic [ref=f7e38]:
+            - generic [ref=f7e39]: Sort
+            - combobox "Sort" [ref=f7e40]:
+              - option "Featured" [selected]
+              - 'option "Price: Low to High"'
+              - 'option "Price: High to Low"'
+              - 'option "Name: A–Z"'
+        - generic [ref=f7e41]:
+          - button "All" [ref=f7e42] [cursor=pointer]
+          - button "GIP / GLP-1 Research" [ref=f7e43] [cursor=pointer]
+          - button "Triple Agonist Research" [ref=f7e44] [cursor=pointer]
+          - button "Multi-Compound Research Blend" [ref=f7e45] [cursor=pointer]
+          - button "Peptide Blend — Research" [ref=f7e46] [cursor=pointer]
+          - button "Cellular Metabolism Research" [ref=f7e47] [cursor=pointer]
+        - paragraph [ref=f7e48]: 6 compounds
+      - generic [ref=f7e49]:
+        - article [ref=f7e50]:
+          - link "View Tirzepatide 40mg" [ref=f7e51] [cursor=pointer]:
+            - /url: /product/tirzepatide-40mg
+            - img "Tirzepatide 40mg" [ref=f7e54]
+            - generic [ref=f7e56]: R&D Only
+            - generic [ref=f7e57]: 99.85% purity
+          - generic [ref=f7e58]:
+            - generic [ref=f7e59]:
+              - text: GIP / GLP-1 Research
+              - heading [level=3] [ref=f7e60]:
+                - link "Tirzepatide 40mg" [ref=f7e61] [cursor=pointer]:
+                  - /url: /product/tirzepatide-40mg
+            - paragraph [ref=f7e62]: A dual GIP and GLP-1 receptor agonist supplied for in vitro metabolic and receptor-signalling research.
+            - generic [ref=f7e63]:
+              - generic [ref=f7e64]:
+                - generic [ref=f7e65]: $100
+                - generic [ref=f7e66]: USD
+              - generic [ref=f7e67]:
+                - link "View" [ref=f7e68] [cursor=pointer]:
+                  - /url: /product/tirzepatide-40mg
+                - button "Add" [ref=f7e69] [cursor=pointer]
+        - article [ref=f7e70]:
+          - link "View Retatrutide 20mg" [ref=f7e71] [cursor=pointer]:
+            - /url: /product/retatrutide-20mg
+            - img "Retatrutide 20mg" [ref=f7e74]
+            - generic [ref=f7e76]: R&D Only
+            - generic [ref=f7e77]: 99.21% purity
+          - generic [ref=f7e78]:
+            - generic [ref=f7e79]:
+              - text: Triple Agonist Research
+              - heading [level=3] [ref=f7e80]:
+                - link "Retatrutide 20mg" [ref=f7e81] [cursor=pointer]:
+                  - /url: /product/retatrutide-20mg
+            - paragraph [ref=f7e82]: A triple GIP/GLP-1/glucagon receptor agonist for advanced metabolic pathway studies in controlled laboratory settings.
+            - generic [ref=f7e83]:
+              - generic [ref=f7e84]:
+                - generic [ref=f7e85]: $100
+                - generic [ref=f7e86]: USD
+              - generic [ref=f7e87]:
+                - link "View" [ref=f7e88] [cursor=pointer]:
+                  - /url: /product/retatrutide-20mg
+                - button "Add" [ref=f7e89] [cursor=pointer]
+        - article [ref=f7e90]:
+          - link "View Retatrutide 40mg" [ref=f7e91] [cursor=pointer]:
+            - /url: /product/retatrutide-40mg
+            - img "Retatrutide 40mg" [ref=f7e94]
+            - generic [ref=f7e96]: R&D Only
+            - generic [ref=f7e97]: 99.269% purity
+          - generic [ref=f7e98]:
+            - generic [ref=f7e99]:
+              - text: Triple Agonist Research
+              - heading [level=3] [ref=f7e100]:
+                - link "Retatrutide 40mg" [ref=f7e101] [cursor=pointer]:
+                  - /url: /product/retatrutide-40mg
+            - paragraph [ref=f7e102]: Higher-concentration triple-receptor agonist formulated for extended in vitro research protocols and comparative assays.
+            - generic [ref=f7e103]:
+              - generic [ref=f7e104]:
+                - generic [ref=f7e105]: $180
+                - generic [ref=f7e106]: USD
+              - generic [ref=f7e107]:
+                - link "View" [ref=f7e108] [cursor=pointer]:
+                  - /url: /product/retatrutide-40mg
+                - button "Add" [ref=f7e109] [cursor=pointer]
+        - article [ref=f7e110]:
+          - link "View GHK-Cu · BPC-157 · TB-500 Blend 70mg" [ref=f7e111] [cursor=pointer]:
+            - /url: /product/glow-70mg
+            - img "GHK-Cu · BPC-157 · TB-500 Blend 70mg" [ref=f7e114]
+            - generic [ref=f7e116]: R&D Only
+          - generic [ref=f7e117]:
+            - generic [ref=f7e118]:
+              - text: Multi-Compound Research Blend
+              - heading [level=3] [ref=f7e119]:
+                - link "GHK-Cu · BPC-157 · TB-500 Blend 70mg" [ref=f7e120] [cursor=pointer]:
+                  - /url: /product/glow-70mg
+            - paragraph [ref=f7e121]: A 70mg three-compound reference blend of GHK-Cu, BPC-157 and TB-500 supplied in a sealed pre-filled research device for controlled laboratory R&D applications.
+            - generic [ref=f7e122]:
+              - generic [ref=f7e123]:
+                - generic [ref=f7e124]: $100
+                - generic [ref=f7e125]: USD
+              - generic [ref=f7e126]:
+                - link "View" [ref=f7e127] [cursor=pointer]:
+                  - /url: /product/glow-70mg
+                - button "Add" [ref=f7e128] [cursor=pointer]
+        - article [ref=f7e129]:
+          - link "View BPC-157 & TB-500 40mg" [ref=f7e130] [cursor=pointer]:
+            - /url: /product/bpc-157-tb-500-40mg
+            - img "BPC-157 & TB-500 40mg" [ref=f7e133]
+            - generic [ref=f7e135]: R&D Only
+          - generic [ref=f7e136]:
+            - generic [ref=f7e137]:
+              - text: Peptide Blend — Research
+              - heading [level=3] [ref=f7e138]:
+                - link "BPC-157 & TB-500 40mg" [ref=f7e139] [cursor=pointer]:
+                  - /url: /product/bpc-157-tb-500-40mg
+            - paragraph [ref=f7e140]: A combined pentadecapeptide and actin-regulating peptide reference blend supplied for in vitro cell-signalling and angiogenesis assay work.
+            - generic [ref=f7e141]:
+              - generic [ref=f7e142]:
+                - generic [ref=f7e143]: $130
+                - generic [ref=f7e144]: USD
+              - generic [ref=f7e145]:
+                - link "View" [ref=f7e146] [cursor=pointer]:
+                  - /url: /product/bpc-157-tb-500-40mg
+                - button "Add" [ref=f7e147] [cursor=pointer]
+        - article [ref=f7e148]:
+          - link "View NAD+ 1,000mg" [ref=f7e149] [cursor=pointer]:
+            - /url: /product/nad-plus-1000mg
+            - img "NAD+ 1,000mg" [ref=f7e152]
+            - generic [ref=f7e154]: R&D Only
+          - generic [ref=f7e155]:
+            - generic [ref=f7e156]:
+              - text: Cellular Metabolism Research
+              - heading [level=3] [ref=f7e157]:
+                - link "NAD+ 1,000mg" [ref=f7e158] [cursor=pointer]:
+                  - /url: /product/nad-plus-1000mg
+            - paragraph [ref=f7e159]: Nicotinamide adenine dinucleotide supplied as a reference material for in vitro cellular metabolism and mitochondrial research.
+            - generic [ref=f7e160]:
+              - generic [ref=f7e161]:
+                - generic [ref=f7e162]: $140
+                - generic [ref=f7e163]: USD
+              - generic [ref=f7e164]:
+                - link "View" [ref=f7e165] [cursor=pointer]:
+                  - /url: /product/nad-plus-1000mg
+                - button "Add" [ref=f7e166] [cursor=pointer]
+    - paragraph [ref=f7e169]: FOR RESEARCH PURPOSES ONLY. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease. Products are supplied strictly for laboratory and analytical research conducted by qualified professionals.
+  - contentinfo [ref=f7e170]:
+    - generic [ref=f7e171]:
+      - generic [ref=f7e172]:
+        - generic [ref=f7e174]:
+          - paragraph [ref=f7e175]: Navigate
+          - list [ref=f7e176]:
+            - listitem [ref=f7e177]:
+              - button "About Us" [ref=f7e178] [cursor=pointer]
+            - listitem [ref=f7e179]:
+              - link "Shop" [ref=f7e180] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f7e181]:
+              - button "Why Us" [ref=f7e182] [cursor=pointer]
+            - listitem [ref=f7e183]:
+              - button "Contact" [ref=f7e184] [cursor=pointer]
+        - generic [ref=f7e185]:
+          - paragraph [ref=f7e186]: Legal
+          - list [ref=f7e187]:
+            - listitem [ref=f7e188]:
+              - link "Press Release" [ref=f7e189] [cursor=pointer]:
+                - /url: /press-release
+            - listitem [ref=f7e190]:
+              - link "Refund Policy" [ref=f7e191] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f7e192]:
+              - link "Shipping Policy" [ref=f7e193] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f7e194]:
+              - link "Privacy Policy" [ref=f7e195] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f7e196]:
+              - link "Terms of Service" [ref=f7e197] [cursor=pointer]:
+                - /url: /terms-of-service
+      - heading "LUMIVEX" [level=2] [ref=f7e199]
+      - generic [ref=f7e200]:
+        - paragraph [ref=f7e201]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f7e202]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f7e203] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f7e211] [cursor=pointer]

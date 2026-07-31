@@ -1,0 +1,94 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - link "Lumivex home" [ref=f12e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f12e5]: LUMIVEX
+      - navigation [ref=f12e10]:
+        - link "Continue shopping" [ref=f12e11] [cursor=pointer]:
+          - /url: /shop
+        - link "Cart, 0 items" [ref=f12e12] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f12e16]:
+    - generic [ref=f12e18]:
+      - text: Legal
+      - heading "Terms of Service" [level=1] [ref=f12e19]
+    - generic [ref=f12e21]:
+      - paragraph [ref=f12e23]: You are using the official website of Lumivex ("we", "us", "our"). By using this site, you agree to comply with the following terms. Please read them carefully. If you do not agree with any part of these terms, please do not use our website or services.
+      - generic [ref=f12e24]:
+        - generic [ref=f12e25]:
+          - heading "General" [level=3] [ref=f12e26]
+          - paragraph [ref=f12e27]: These Terms govern your use of lumivex.store. We may update these Terms from time to time without notice. Continued use of the website constitutes acceptance of the current Terms.
+        - generic [ref=f12e28]:
+          - heading "Age Requirement" [level=3] [ref=f12e29]
+          - paragraph [ref=f12e30]: By accessing this site, you confirm that you are at least 18 years old and are legally able to enter into contracts. Our products and services are intended only for individuals who meet this requirement.
+        - generic [ref=f12e31]:
+          - heading "Product Use" [level=3] [ref=f12e32]
+          - paragraph [ref=f12e33]: Products sold on lumivex.store are supplied strictly for research and development purposes under controlled conditions. They are not to be used for diagnosis, treatment, or prevention of any disease or medical condition.
+        - generic [ref=f12e34]:
+          - heading "Orders & Payment" [level=3] [ref=f12e35]
+          - paragraph [ref=f12e36]: All orders are subject to acceptance and availability. We reserve the right to refuse or cancel orders at our discretion. Payment must be made in full before orders are dispatched. We accept payment by card, bank transfer, or USDT.
+        - generic [ref=f12e37]:
+          - heading "Dispatch & Delivery" [level=3] [ref=f12e38]
+          - paragraph [ref=f12e39]: We aim to dispatch orders within a reasonable timeframe — as a standard, within 2 days, with next-day delivery within the UK. Shipping timelines are not guaranteed and may be affected by external factors. We are not liable for delays beyond our control or that of our shipping methods.
+        - generic [ref=f12e40]:
+          - heading "Refund Policy" [level=3] [ref=f12e41]
+          - paragraph [ref=f12e42]: Due to the nature of our products, returns are only accepted for items that are unopened, unused, and in their original condition. Opened or tampered-with items are non-refundable. See our Refund Policy for details.
+        - generic [ref=f12e43]:
+          - heading "Disclaimer" [level=3] [ref=f12e44]
+          - paragraph [ref=f12e45]: All products are sold solely for laboratory R&D. Lumivex does not accept or condone misuse, including but not limited to human consumption, veterinary use, or resale.
+        - generic [ref=f12e46]:
+          - heading "Limitation of Liability" [level=3] [ref=f12e47]
+          - paragraph [ref=f12e48]: By using this site, you agree to indemnify and hold harmless Lumivex, its directors, and affiliates from any claims, damages, or liabilities arising from product use or non-use under these Terms.
+        - generic [ref=f12e49]:
+          - heading "Account Responsibility" [level=3] [ref=f12e50]
+          - paragraph [ref=f12e51]: If you create an account on our website, you are responsible for maintaining the confidentiality of your log-in credentials. All activities conducted under your account are your responsibility.
+        - generic [ref=f12e52]:
+          - heading "Intellectual Property" [level=3] [ref=f12e53]
+          - paragraph [ref=f12e54]: All trademarks, logos, and content displayed on lumivex.store are owned or licensed by Lumivex. You may not reproduce, distribute, or commercially exploit any content without prior written consent.
+        - generic [ref=f12e55]:
+          - heading "Governing Law" [level=3] [ref=f12e56]
+          - paragraph [ref=f12e57]: These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising will be subject to the exclusive jurisdiction of the UK courts.
+        - generic [ref=f12e58]:
+          - heading "Contact Us" [level=3] [ref=f12e59]
+          - paragraph [ref=f12e60]: "For any queries relating to these Terms, please contact:"
+          - paragraph [ref=f12e61]: "Email: research@lumivex.store — Website: https://lumivex.store"
+  - contentinfo [ref=f12e62]:
+    - generic [ref=f12e63]:
+      - generic [ref=f12e64]:
+        - generic [ref=f12e66]:
+          - paragraph [ref=f12e67]: Navigate
+          - list [ref=f12e68]:
+            - listitem [ref=f12e69]:
+              - button "About Us" [ref=f12e70] [cursor=pointer]
+            - listitem [ref=f12e71]:
+              - link "Shop" [ref=f12e72] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f12e73]:
+              - button "Why Us" [ref=f12e74] [cursor=pointer]
+            - listitem [ref=f12e75]:
+              - button "Contact" [ref=f12e76] [cursor=pointer]
+        - generic [ref=f12e77]:
+          - paragraph [ref=f12e78]: Legal
+          - list [ref=f12e79]:
+            - listitem [ref=f12e80]:
+              - link "Press Release" [ref=f12e81] [cursor=pointer]:
+                - /url: /press-release
+            - listitem [ref=f12e82]:
+              - link "Refund Policy" [ref=f12e83] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f12e84]:
+              - link "Shipping Policy" [ref=f12e85] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f12e86]:
+              - link "Privacy Policy" [ref=f12e87] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f12e88]:
+              - link "Terms of Service" [ref=f12e89] [cursor=pointer]:
+                - /url: /terms-of-service
+      - heading "LUMIVEX" [level=2] [ref=f12e91]
+      - generic [ref=f12e92]:
+        - paragraph [ref=f12e93]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f12e94]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f12e95] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f12e103] [cursor=pointer]

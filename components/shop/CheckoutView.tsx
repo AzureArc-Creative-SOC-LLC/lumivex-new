@@ -129,7 +129,7 @@ export default function CheckoutView() {
               },
               order: {
                 orderNumber: String(o.order_number ?? res.orderNumber),
-                currency: String(o.currency ?? 'GBP'),
+                currency: String(o.currency ?? 'USD'),
                 items: orderItems.map((it) => {
                   const row = it as Record<string, unknown>;
                   return {

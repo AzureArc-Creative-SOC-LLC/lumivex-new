@@ -1,0 +1,319 @@
+- generic [active] [ref=f10e1]:
+  - generic [ref=f10e4]:
+    - generic [ref=f10e5]: "✦RESEARCH USE ONLY — NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only."
+    - generic [ref=f10e6]: "✦OFFICIAL SITE: Beware of scam sites. Lumivex has never operated on any social media platforms."
+    - generic [ref=f10e7]: ✦SUPPLYING LEADING LABORATORIES ACROSS THE UK & EU WITH HIGH-PURITY RESEARCH COMPOUNDS.
+    - generic [ref=f10e8]: "✦RESEARCH USE ONLY — NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only."
+    - generic [ref=f10e9]: "✦OFFICIAL SITE: Beware of scam sites. Lumivex has never operated on any social media platforms."
+    - generic [ref=f10e10]: ✦SUPPLYING LEADING LABORATORIES ACROSS THE UK & EU WITH HIGH-PURITY RESEARCH COMPOUNDS.
+  - banner [ref=f10e11]:
+    - navigation [ref=f10e12]:
+      - button "Lumivex home" [ref=f10e13] [cursor=pointer]:
+        - generic [ref=f10e14]: LUMIVEX
+      - generic [ref=f10e19]:
+        - link "Cart, 0 items" [ref=f10e20] [cursor=pointer]:
+          - /url: /cart
+        - button "Toggle menu" [ref=f10e24] [cursor=pointer]
+  - generic:
+    - list:
+      - listitem:
+        - button "Home"
+      - listitem:
+        - button "About"
+      - listitem:
+        - link "Shop":
+          - /url: /shop
+      - listitem:
+        - button "Why Us"
+      - listitem:
+        - button "Standards"
+      - listitem:
+        - button "Contact"
+    - generic:
+      - link "Shop Now":
+        - /url: /shop
+      - link "View Cart":
+        - /url: /cart
+  - main [ref=f10e28]:
+    - generic [ref=f10e29]:
+      - img "Lumivex Labs research laboratory" [ref=f10e31]
+      - generic [ref=f10e32]:
+        - generic [ref=f10e33]: Engineered for precision · Verified by third-party analysis
+        - paragraph [ref=f10e34]: Supplying leading laboratories across the UK & EU with high-purity research compounds manufactured in-house, batch tested, and fully traceable for R&D applications. Research use only not for human or veterinary use.
+        - generic [ref=f10e35]:
+          - button "Browse the Catalogue" [ref=f10e37] [cursor=pointer]
+          - button "About Lumivex" [ref=f10e38] [cursor=pointer]
+      - generic [ref=f10e39]: Scroll
+    - generic [ref=f10e44]:
+      - generic [ref=f10e45]: In-House — R&D
+      - generic [ref=f10e48]:
+        - img "Lumivex research team in the laboratory" [ref=f10e52]
+        - img "Scientist analysing a sample at the microscope" [ref=f10e56]
+        - img "Pipetting research compounds in the lab" [ref=f10e60]
+        - generic [ref=f10e62]:
+          - generic [ref=f10e63]: Molecular Precision
+          - generic [ref=f10e64]:
+            - generic [ref=f10e65]:
+              - paragraph [ref=f10e66]: 99.2%+
+              - paragraph [ref=f10e67]: Lowest assayed batch
+            - generic [ref=f10e68]:
+              - paragraph [ref=f10e69]: HPLC + MS
+              - paragraph [ref=f10e70]: Batch validation
+        - img "Molecular structure of a research compound" [ref=f10e74]
+    - generic [ref=f10e77]:
+      - img "Lumivex research compound, in-house" [ref=f10e81]
+      - generic [ref=f10e82]: About Lumivex
+    - generic [ref=f10e86]:
+      - generic [ref=f10e87]:
+        - generic [ref=f10e88]: Research-Grade
+        - generic [ref=f10e89]: ✦
+      - generic [ref=f10e90]:
+        - generic [ref=f10e91]: Batch-Tested
+        - generic [ref=f10e92]: ✦
+      - generic [ref=f10e93]:
+        - generic [ref=f10e94]: Fully Traceable
+        - generic [ref=f10e95]: ✦
+      - generic [ref=f10e96]:
+        - generic [ref=f10e97]: Third-Party Analysed
+        - generic [ref=f10e98]: ✦
+      - generic [ref=f10e99]:
+        - generic [ref=f10e100]: Certificate of Analysis
+        - generic [ref=f10e101]: ✦
+      - generic [ref=f10e102]:
+        - generic [ref=f10e103]: Research Use Only
+        - generic [ref=f10e104]: ✦
+      - generic [ref=f10e105]:
+        - generic [ref=f10e106]: Research-Grade
+        - generic [ref=f10e107]: ✦
+      - generic [ref=f10e108]:
+        - generic [ref=f10e109]: Batch-Tested
+        - generic [ref=f10e110]: ✦
+      - generic [ref=f10e111]:
+        - generic [ref=f10e112]: Fully Traceable
+        - generic [ref=f10e113]: ✦
+      - generic [ref=f10e114]:
+        - generic [ref=f10e115]: Third-Party Analysed
+        - generic [ref=f10e116]: ✦
+      - generic [ref=f10e117]:
+        - generic [ref=f10e118]: Certificate of Analysis
+        - generic [ref=f10e119]: ✦
+      - generic [ref=f10e120]:
+        - generic [ref=f10e121]: Research Use Only
+        - generic [ref=f10e122]: ✦
+    - generic [ref=f10e124]:
+      - generic [ref=f10e125]: The Catalogue
+      - generic [ref=f10e127]:
+        - article [ref=f10e128]:
+          - link "View Tirzepatide 40mg" [ref=f10e129] [cursor=pointer]:
+            - /url: /product/tirzepatide-40mg
+            - img "Tirzepatide 40mg" [ref=f10e132]
+            - generic [ref=f10e134]: GIP / GLP-1 Research
+          - generic [ref=f10e135]:
+            - generic [ref=f10e136]:
+              - heading [level=3] [ref=f10e137]:
+                - link "Tirzepatide 40mg" [ref=f10e138] [cursor=pointer]:
+                  - /url: /product/tirzepatide-40mg
+                - text: R&D Only
+              - generic [ref=f10e139]:
+                - generic [ref=f10e140]: $100
+                - generic [ref=f10e141]: USD
+            - generic [ref=f10e142]:
+              - link "View more" [ref=f10e143] [cursor=pointer]:
+                - /url: /product/tirzepatide-40mg
+              - button "Add to cart" [ref=f10e144] [cursor=pointer]
+        - article [ref=f10e145]:
+          - link "View Retatrutide 20mg" [ref=f10e146] [cursor=pointer]:
+            - /url: /product/retatrutide-20mg
+            - img "Retatrutide 20mg" [ref=f10e149]
+            - generic [ref=f10e151]: Triple Agonist Research
+          - generic [ref=f10e152]:
+            - generic [ref=f10e153]:
+              - heading [level=3] [ref=f10e154]:
+                - link "Retatrutide 20mg" [ref=f10e155] [cursor=pointer]:
+                  - /url: /product/retatrutide-20mg
+                - text: R&D Only
+              - generic [ref=f10e156]:
+                - generic [ref=f10e157]: $100
+                - generic [ref=f10e158]: USD
+            - generic [ref=f10e159]:
+              - link "View more" [ref=f10e160] [cursor=pointer]:
+                - /url: /product/retatrutide-20mg
+              - button "Add to cart" [ref=f10e161] [cursor=pointer]
+        - article [ref=f10e162]:
+          - link "View Retatrutide 40mg" [ref=f10e163] [cursor=pointer]:
+            - /url: /product/retatrutide-40mg
+            - img "Retatrutide 40mg" [ref=f10e166]
+            - generic [ref=f10e168]: Triple Agonist Research
+          - generic [ref=f10e169]:
+            - generic [ref=f10e170]:
+              - heading [level=3] [ref=f10e171]:
+                - link "Retatrutide 40mg" [ref=f10e172] [cursor=pointer]:
+                  - /url: /product/retatrutide-40mg
+                - text: R&D Only
+              - generic [ref=f10e173]:
+                - generic [ref=f10e174]: $180
+                - generic [ref=f10e175]: USD
+            - generic [ref=f10e176]:
+              - link "View more" [ref=f10e177] [cursor=pointer]:
+                - /url: /product/retatrutide-40mg
+              - button "Add to cart" [ref=f10e178] [cursor=pointer]
+        - article [ref=f10e179]:
+          - link "View GHK-Cu · BPC-157 · TB-500 Blend 70mg" [ref=f10e180] [cursor=pointer]:
+            - /url: /product/glow-70mg
+            - img "GHK-Cu · BPC-157 · TB-500 Blend 70mg" [ref=f10e183]
+            - generic [ref=f10e185]: Multi-Compound Research Blend
+          - generic [ref=f10e186]:
+            - generic [ref=f10e187]:
+              - heading [level=3] [ref=f10e188]:
+                - link "GHK-Cu · BPC-157 · TB-500 Blend 70mg" [ref=f10e189] [cursor=pointer]:
+                  - /url: /product/glow-70mg
+                - text: R&D Only
+              - generic [ref=f10e190]:
+                - generic [ref=f10e191]: $100
+                - generic [ref=f10e192]: USD
+            - generic [ref=f10e193]:
+              - link "View more" [ref=f10e194] [cursor=pointer]:
+                - /url: /product/glow-70mg
+              - button "Add to cart" [ref=f10e195] [cursor=pointer]
+        - article [ref=f10e196]:
+          - link "View BPC-157 & TB-500 40mg" [ref=f10e197] [cursor=pointer]:
+            - /url: /product/bpc-157-tb-500-40mg
+            - img "BPC-157 & TB-500 40mg" [ref=f10e200]
+            - generic [ref=f10e202]: Peptide Blend — Research
+          - generic [ref=f10e203]:
+            - generic [ref=f10e204]:
+              - heading [level=3] [ref=f10e205]:
+                - link "BPC-157 & TB-500 40mg" [ref=f10e206] [cursor=pointer]:
+                  - /url: /product/bpc-157-tb-500-40mg
+                - text: R&D Only
+              - generic [ref=f10e207]:
+                - generic [ref=f10e208]: $130
+                - generic [ref=f10e209]: USD
+            - generic [ref=f10e210]:
+              - link "View more" [ref=f10e211] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500-40mg
+              - button "Add to cart" [ref=f10e212] [cursor=pointer]
+        - article [ref=f10e213]:
+          - link "View NAD+ 1,000mg" [ref=f10e214] [cursor=pointer]:
+            - /url: /product/nad-plus-1000mg
+            - img "NAD+ 1,000mg" [ref=f10e217]
+            - generic [ref=f10e219]: Cellular Metabolism Research
+          - generic [ref=f10e220]:
+            - generic [ref=f10e221]:
+              - heading [level=3] [ref=f10e222]:
+                - link "NAD+ 1,000mg" [ref=f10e223] [cursor=pointer]:
+                  - /url: /product/nad-plus-1000mg
+                - text: R&D Only
+              - generic [ref=f10e224]:
+                - generic [ref=f10e225]: $140
+                - generic [ref=f10e226]: USD
+            - generic [ref=f10e227]:
+              - link "View more" [ref=f10e228] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+              - button "Add to cart" [ref=f10e229] [cursor=pointer]
+    - generic [ref=f10e232]:
+      - generic [ref=f10e233]:
+        - img "Lumivex research scientist" [ref=f10e238]
+        - img "Lumivex research laboratory team" [ref=f10e240]
+        - img "Laboratory glassware" [ref=f10e242]
+      - generic [ref=f10e243]:
+        - text: Why Lumivex
+        - heading "An R&D-compliant supply chain." [level=2] [ref=f10e244]
+        - paragraph [ref=f10e245]: Every compound is engineered, validated, and released under one roof with documented integrity from synthesis to release and a certificate of analysis behind every batch.
+        - generic [ref=f10e246]:
+          - generic [ref=f10e247]:
+            - paragraph [ref=f10e248]: "6"
+            - paragraph [ref=f10e249]: Research formulations catalogued
+          - generic [ref=f10e250]:
+            - paragraph [ref=f10e251]: 100%
+            - paragraph [ref=f10e252]: Batches supplied with a COA
+          - generic [ref=f10e253]:
+            - paragraph [ref=f10e254]: 99.2%+
+            - paragraph [ref=f10e255]: Lowest assayed batch purity
+        - list [ref=f10e256]:
+          - listitem [ref=f10e257]:
+            - generic [ref=f10e261]: Built for Peptide R&D
+          - listitem [ref=f10e262]:
+            - generic [ref=f10e266]: Real-Time Monitoring
+          - listitem [ref=f10e267]:
+            - generic [ref=f10e273]: Precision Synthesis
+          - listitem [ref=f10e274]:
+            - generic [ref=f10e278]: Automated Filling
+          - listitem [ref=f10e279]:
+            - generic [ref=f10e284]: Secure Chain of Custody
+          - listitem [ref=f10e285]:
+            - generic [ref=f10e289]: Cold-Chain Critical
+        - button "Explore the catalogue" [ref=f10e290] [cursor=pointer]:
+          - text: Explore the catalogue
+          - generic [ref=f10e291]: →
+    - generic [ref=f10e292]:
+      - generic: “
+      - generic [ref=f10e293]:
+        - generic [ref=f10e294]:
+          - generic [ref=f10e295]: Supply Standards
+          - generic [ref=f10e296]: Feedback on documentation, packaging and service never on use.
+        - blockquote [ref=f10e298]:
+          - paragraph [ref=f10e299]: Every consignment arrives with its batch documentation and a matching third-party certificate. The paperwork is the most complete we have received from a UK supplier.
+          - generic [ref=f10e300]:
+            - img "Dr. Helena Voss" [ref=f10e302]
+            - generic [ref=f10e303]:
+              - generic [ref=f10e304]: Dr. Helena Voss
+              - generic [ref=f10e305]: Principal Investigator, Zürich
+        - generic [ref=f10e306]:
+          - generic [ref=f10e307]:
+            - generic [ref=f10e308]: "01"
+            - generic [ref=f10e309]:
+              - button "Show testimonial 1" [ref=f10e310] [cursor=pointer]
+              - button "Show testimonial 2" [ref=f10e311] [cursor=pointer]
+              - button "Show testimonial 3" [ref=f10e312] [cursor=pointer]
+            - generic [ref=f10e313]: "03"
+          - generic [ref=f10e314]:
+            - button "Previous testimonial" [ref=f10e315] [cursor=pointer]
+            - button "Next testimonial" [ref=f10e318] [cursor=pointer]
+    - generic [ref=f10e325]:
+      - generic [ref=f10e326]:
+        - paragraph [ref=f10e327]: Email
+        - link "research@lumivex.store" [ref=f10e328] [cursor=pointer]:
+          - /url: mailto:research@lumivex.store
+      - generic [ref=f10e329]:
+        - paragraph [ref=f10e330]: Compliance
+        - paragraph [ref=f10e331]: Research use only not for human or veterinary consumption.
+  - contentinfo [ref=f10e332]:
+    - generic [ref=f10e333]:
+      - generic [ref=f10e334]:
+        - generic [ref=f10e336]:
+          - paragraph [ref=f10e337]: Navigate
+          - list [ref=f10e338]:
+            - listitem [ref=f10e339]:
+              - button "About Us" [ref=f10e340] [cursor=pointer]
+            - listitem [ref=f10e341]:
+              - link "Shop" [ref=f10e342] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f10e343]:
+              - button "Why Us" [ref=f10e344] [cursor=pointer]
+            - listitem [ref=f10e345]:
+              - button "Contact" [ref=f10e346] [cursor=pointer]
+        - generic [ref=f10e347]:
+          - paragraph [ref=f10e348]: Legal
+          - list [ref=f10e349]:
+            - listitem [ref=f10e350]:
+              - link "Press Release" [ref=f10e351] [cursor=pointer]:
+                - /url: /press-release
+            - listitem [ref=f10e352]:
+              - link "Refund Policy" [ref=f10e353] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f10e354]:
+              - link "Shipping Policy" [ref=f10e355] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f10e356]:
+              - link "Privacy Policy" [ref=f10e357] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f10e358]:
+              - link "Terms of Service" [ref=f10e359] [cursor=pointer]:
+                - /url: /terms-of-service
+      - heading "LUMIVEX" [level=2] [ref=f10e361]
+      - generic [ref=f10e362]:
+        - paragraph [ref=f10e363]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f10e364]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f10e365] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f10e373] [cursor=pointer]

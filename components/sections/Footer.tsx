@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { FOOTER_LINKS } from '@/lib/data';
 import { scrollToSection } from '@/lib/lenis';
 import RevealText from '@/components/animations/RevealText';
@@ -51,16 +52,27 @@ export default function Footer() {
               Navigate
             </p>
             <ul className="mt-6 space-y-3">
-              {FOOTER_LINKS.navigate.map((link) => (
-                <li key={link.href}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="link-underline text-sm font-light text-ivory/70 hover:text-ivory"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
+              {FOOTER_LINKS.navigate.map((link) =>
+                link.href.startsWith('#') ? (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="link-underline text-sm font-light text-ivory/70 hover:text-ivory"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ) : (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="link-underline text-sm font-light text-ivory/70 hover:text-ivory"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -70,13 +82,13 @@ export default function Footer() {
             </p>
             <ul className="mt-6 space-y-3">
               {FOOTER_LINKS.legal.map((s) => (
-                <li key={s}>
-                  <a
-                    href="#"
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
                     className="link-underline text-sm font-light text-ivory/70 hover:text-ivory"
                   >
-                    {s}
-                  </a>
+                    {s.label}
+                  </Link>
                 </li>
               ))}
             </ul>

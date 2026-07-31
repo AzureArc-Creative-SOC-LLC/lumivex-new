@@ -1,0 +1,102 @@
+- generic [active] [ref=f15e1]:
+  - banner [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - link "Lumivex home" [ref=f15e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f15e5]: LUMIVEX
+      - navigation [ref=f15e10]:
+        - link "Continue shopping" [ref=f15e11] [cursor=pointer]:
+          - /url: /shop
+        - link "Cart, 0 items" [ref=f15e12] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f15e16]:
+    - generic [ref=f15e18]:
+      - text: Media
+      - heading "Official Statement from Lumivex" [level=1] [ref=f15e19]
+    - generic [ref=f15e21]:
+      - paragraph [ref=f15e23]: This statement sets out Lumivex’s position as a research and development supplier, our regulatory approach, and how we protect customers from impersonation and misinformation.
+      - generic [ref=f15e24]:
+        - generic [ref=f15e25]:
+          - heading "1. Purpose of This Statement" [level=3] [ref=f15e26]
+          - paragraph [ref=f15e27]: Lumivex operates in a sector that attracts significant public interest and, at times, misinformation. This page exists to give customers, laboratories, and media a clear, factual reference for who we are, how we operate, and what we do and do not claim about our products.
+        - generic [ref=f15e28]:
+          - 'heading "2. Our Focus: Lawful Research Supply" [level=3] [ref=f15e29]'
+          - paragraph [ref=f15e30]: Lumivex manufactures and supplies research-grade peptides and reference compounds exclusively for laboratory research and development. We do not manufacture, market, or sell pharmaceutical or medicinal products, and we make no therapeutic or clinical claims about any compound we supply.
+        - generic [ref=f15e31]:
+          - heading "3. No Social-Media Sales or Promotion" [level=3] [ref=f15e32]
+          - paragraph [ref=f15e33]: Lumivex has never operated on any social media platform. Any page, profile, or individual claiming to represent Lumivex on social media is unauthorised and is very likely attempting fraud.
+          - paragraph [ref=f15e34]:
+            - strong [ref=f15e35]: "Note:"
+            - text: Our only official site is lumivex.store. Verify any communication directly through research@lumivex.store before acting on it.
+        - generic [ref=f15e36]:
+          - heading "4. Regulatory Positioning" [level=3] [ref=f15e37]
+          - paragraph [ref=f15e38]: As a UK/EU research supplier, Lumivex operates in line with the regulatory frameworks generally applicable to laboratory chemical and reference-material suppliers, including principles drawn from the Health and Safety at Work Act 1974 and COSHH Regulations, the REACH and CLP Regulations governing classification and labelling, and the General Product Safety Regulations for non-hazardous packaging.
+          - paragraph [ref=f15e39]: "Every product we supply is labelled: \"For laboratory research and development purposes only. Not for human or veterinary use.\""
+        - generic [ref=f15e40]:
+          - heading "5. Brand Protection & Impersonation" [level=3] [ref=f15e41]
+          - paragraph [ref=f15e42]: From time to time, third parties misuse the Lumivex name, logo, or product imagery without authorisation. We actively monitor for this activity and pursue removal wherever it is identified. If you encounter a site, reseller, or social account claiming affiliation with Lumivex outside lumivex.store, please report it to research@lumivex.store.
+        - generic [ref=f15e43]:
+          - heading "6. About Our Research Compounds" [level=3] [ref=f15e44]
+          - paragraph [ref=f15e45]: The peptides and reference compounds we supply are established subjects of biochemical research, independently of any single manufacturer. Each batch we release is analysed by a third-party laboratory, with certificates of analysis published alongside the corresponding product listing so purity and composition can be independently verified.
+        - generic [ref=f15e46]:
+          - heading "7. Consumer Safety & Quality Standards" [level=3] [ref=f15e47]
+          - paragraph [ref=f15e48]: "Internally, we follow procedures modelled on Good Laboratory Practice (GLP) principles: batch-level traceability and documentation, validated cold-chain handling (2–8°C), tamper-evident and non-hazardous packaging, and a prominent research-only disclaimer on every product."
+          - paragraph [ref=f15e49]: We strongly advise against purchasing injectable research materials via social media or unverified resellers. Lumivex distributes exclusively through lumivex.store.
+        - generic [ref=f15e50]:
+          - heading "8. Responsible Media Enquiries" [level=3] [ref=f15e51]
+          - paragraph [ref=f15e52]: We welcome factual, well-sourced reporting on the research-compound sector and are glad to respond to direct enquiries from journalists or regulators. Please route media requests through research@lumivex.store so we can provide accurate, verifiable information.
+        - generic [ref=f15e53]:
+          - heading "9. Summary" [level=3] [ref=f15e54]
+          - list [ref=f15e55]:
+            - listitem [ref=f15e56]: Supplies research-grade compounds only, fully labelled and traceable.
+            - listitem [ref=f15e57]: Has no social-media sales presence — our only official site is lumivex.store.
+            - listitem [ref=f15e58]: Publishes independent, third-party certificates of analysis for every batch.
+            - listitem [ref=f15e59]: Actively monitors and reports impersonation and misuse of our brand.
+        - generic [ref=f15e60]:
+          - heading "Contact Us" [level=3] [ref=f15e61]
+          - paragraph [ref=f15e62]: "For any media or general enquiries, please contact:"
+          - paragraph [ref=f15e63]: "Email: research@lumivex.store — Website: https://lumivex.store"
+  - contentinfo [ref=f15e64]:
+    - generic [ref=f15e65]:
+      - generic [ref=f15e66]:
+        - paragraph [ref=f15e68]:
+          - generic [ref=f15e69]: Premium research compounds
+          - generic [ref=f15e70]: engineered for precision, validated
+          - generic [ref=f15e71]: by science.
+        - generic [ref=f15e72]:
+          - paragraph [ref=f15e73]: Navigate
+          - list [ref=f15e74]:
+            - listitem [ref=f15e75]:
+              - button "About Us" [ref=f15e76] [cursor=pointer]
+            - listitem [ref=f15e77]:
+              - link "Shop" [ref=f15e78] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f15e79]:
+              - button "Why Us" [ref=f15e80] [cursor=pointer]
+            - listitem [ref=f15e81]:
+              - button "Contact" [ref=f15e82] [cursor=pointer]
+        - generic [ref=f15e83]:
+          - paragraph [ref=f15e84]: Legal
+          - list [ref=f15e85]:
+            - listitem [ref=f15e86]:
+              - link "Press Release" [ref=f15e87] [cursor=pointer]:
+                - /url: /press-release
+            - listitem [ref=f15e88]:
+              - link "Refund Policy" [ref=f15e89] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f15e90]:
+              - link "Shipping Policy" [ref=f15e91] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f15e92]:
+              - link "Privacy Policy" [ref=f15e93] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f15e94]:
+              - link "Terms of Service" [ref=f15e95] [cursor=pointer]:
+                - /url: /terms-of-service
+      - heading "LUMIVEX" [level=2] [ref=f15e97]
+      - generic [ref=f15e98]:
+        - paragraph [ref=f15e99]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f15e100]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f15e101] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f15e109] [cursor=pointer]
+  - alert [ref=f15e113]

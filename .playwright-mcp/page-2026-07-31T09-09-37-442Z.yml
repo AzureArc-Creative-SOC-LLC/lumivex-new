@@ -1,0 +1,90 @@
+- generic [active] [ref=f14e1]:
+  - banner [ref=f14e2]:
+    - generic [ref=f14e3]:
+      - link "Lumivex home" [ref=f14e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f14e5]: LUMIVEX
+      - navigation [ref=f14e10]:
+        - link "Continue shopping" [ref=f14e11] [cursor=pointer]:
+          - /url: /shop
+        - link "Cart, 0 items" [ref=f14e12] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f14e16]:
+    - generic [ref=f14e18]:
+      - text: Legal
+      - heading "Shipping Policy" [level=1] [ref=f14e19]
+    - generic [ref=f14e21]:
+      - paragraph [ref=f14e23]: This Shipping Policy outlines how orders placed on lumivex.store are processed, dispatched, and delivered.
+      - generic [ref=f14e24]:
+        - generic [ref=f14e25]:
+          - heading "Dispatch Time" [level=3] [ref=f14e26]
+          - paragraph [ref=f14e27]: Orders placed and paid for before 3pm (UK time) on working days are typically dispatched the same day. Orders received after 3pm or on weekends/public holidays are dispatched the next working day.
+        - generic [ref=f14e28]:
+          - heading "Shipping Carriers" [level=3] [ref=f14e29]
+          - paragraph [ref=f14e30]: We use tracked and signed-for courier services (e.g., UPS, Royal Mail, DPD) depending on destination, weight, and service availability. Once shipped, you will receive tracking information by email or SMS.
+        - generic [ref=f14e31]:
+          - heading "Delivery Times" [level=3] [ref=f14e32]
+          - list [ref=f14e33]:
+            - listitem [ref=f14e34]: "UK Orders: Typically delivered next working day after dispatch."
+            - listitem [ref=f14e35]: "International Orders: Delivery times vary by location and customs handling, but usually range from 3–10 working days."
+        - generic [ref=f14e36]:
+          - heading "Shipping Fees" [level=3] [ref=f14e37]
+          - paragraph [ref=f14e38]: Shipping costs are shown at checkout, calculated based on your location and parcel weight. We occasionally offer free shipping promotions.
+        - generic [ref=f14e39]:
+          - heading "Order Tracking" [level=3] [ref=f14e40]
+          - paragraph [ref=f14e41]: All shipments include tracking. You'll receive a tracking number once your parcel leaves our fulfilment centre.
+        - generic [ref=f14e42]:
+          - heading "Failed Delivery Attempts" [level=3] [ref=f14e43]
+          - paragraph [ref=f14e44]: If no one is available to accept the parcel, the courier may leave a calling card or attempt redelivery. You must follow up with the courier directly using your tracking number.
+        - generic [ref=f14e45]:
+          - heading "Customs & Import Duties" [level=3] [ref=f14e46]
+          - paragraph [ref=f14e47]: International buyers are responsible for any applicable customs duties, VAT, or import taxes. These charges are not included in our product or shipping prices.
+        - generic [ref=f14e48]:
+          - heading "Delivery Issues" [level=3] [ref=f14e49]
+          - paragraph [ref=f14e50]: If your parcel is delayed, lost, or arrives damaged, please contact us at research@lumivex.store within 72 hours of the expected delivery date. Include your order number and tracking details.
+        - generic [ref=f14e51]:
+          - heading "Address Accuracy" [level=3] [ref=f14e52]
+          - paragraph [ref=f14e53]: Ensure your delivery details are entered correctly. We cannot be held responsible for delivery issues resulting from incorrect or incomplete address information.
+        - generic [ref=f14e54]:
+          - heading "Contact Us" [level=3] [ref=f14e55]
+          - paragraph [ref=f14e56]: "For any shipping-related queries, please contact:"
+          - paragraph [ref=f14e57]: "Email: research@lumivex.store — Website: https://lumivex.store"
+  - contentinfo [ref=f14e58]:
+    - generic [ref=f14e59]:
+      - generic [ref=f14e60]:
+        - generic [ref=f14e62]:
+          - paragraph [ref=f14e63]: Navigate
+          - list [ref=f14e64]:
+            - listitem [ref=f14e65]:
+              - button "About Us" [ref=f14e66] [cursor=pointer]
+            - listitem [ref=f14e67]:
+              - link "Shop" [ref=f14e68] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f14e69]:
+              - button "Why Us" [ref=f14e70] [cursor=pointer]
+            - listitem [ref=f14e71]:
+              - button "Contact" [ref=f14e72] [cursor=pointer]
+        - generic [ref=f14e73]:
+          - paragraph [ref=f14e74]: Legal
+          - list [ref=f14e75]:
+            - listitem [ref=f14e76]:
+              - link "Press Release" [ref=f14e77] [cursor=pointer]:
+                - /url: /press-release
+            - listitem [ref=f14e78]:
+              - link "Refund Policy" [ref=f14e79] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f14e80]:
+              - link "Shipping Policy" [ref=f14e81] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f14e82]:
+              - link "Privacy Policy" [ref=f14e83] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f14e84]:
+              - link "Terms of Service" [ref=f14e85] [cursor=pointer]:
+                - /url: /terms-of-service
+      - heading "LUMIVEX" [level=2] [ref=f14e87]
+      - generic [ref=f14e88]:
+        - paragraph [ref=f14e89]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f14e90]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f14e91] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f14e99] [cursor=pointer]

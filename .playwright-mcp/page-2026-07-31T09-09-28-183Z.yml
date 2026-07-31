@@ -1,0 +1,93 @@
+- generic [active] [ref=f13e1]:
+  - banner [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - link "Lumivex home" [ref=f13e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f13e5]: LUMIVEX
+      - navigation [ref=f13e10]:
+        - link "Continue shopping" [ref=f13e11] [cursor=pointer]:
+          - /url: /shop
+        - link "Cart, 0 items" [ref=f13e12] [cursor=pointer]:
+          - /url: /cart
+  - main [ref=f13e16]:
+    - generic [ref=f13e18]:
+      - text: Legal
+      - heading "Refund Policy" [level=1] [ref=f13e19]
+    - generic [ref=f13e21]:
+      - paragraph [ref=f13e23]: Thank you for choosing Lumivex. We take great pride in delivering premium-quality research-use-only products. Please read the following carefully to understand our returns and refund process.
+      - generic [ref=f13e24]:
+        - generic [ref=f13e25]:
+          - heading "Research-Use Products" [level=3] [ref=f13e26]
+          - paragraph [ref=f13e27]: All items sold by Lumivex, including peptide pens and reference compounds, are intended strictly for research and development purposes. As such, they are not intended for human consumption, diagnosis, or treatment. By purchasing, you agree to these terms.
+        - generic [ref=f13e28]:
+          - heading "Returns Eligibility" [level=3] [ref=f13e29]
+          - paragraph [ref=f13e30]: Due to the sensitive nature of our products and to maintain quality assurance, we do not accept returns on opened or used items. Only unopened, unused items in original condition may be considered for return.
+        - generic [ref=f13e31]:
+          - heading "Return Window" [level=3] [ref=f13e32]
+          - paragraph [ref=f13e33]: Customers may request a return within 7 days of delivery. If 7 days have passed since your order was received, unfortunately we cannot offer a refund or exchange.
+        - generic [ref=f13e34]:
+          - heading "Non-Returnable Items" [level=3] [ref=f13e35]
+          - paragraph [ref=f13e36]: "We are unable to accept returns for:"
+          - list [ref=f13e37]:
+            - listitem [ref=f13e38]: Opened or used items
+            - listitem [ref=f13e39]: Products not stored correctly (e.g., not kept refrigerated)
+            - listitem [ref=f13e40]: Items not in their original packaging
+            - listitem [ref=f13e41]: Returns initiated after 7 days from delivery
+        - generic [ref=f13e42]:
+          - heading "Reporting Issues" [level=3] [ref=f13e43]
+          - paragraph [ref=f13e44]: If your order arrives damaged, incorrect, or defective, please contact our support team at research@lumivex.store within 48 hours of delivery. Include your order number, description of the issue, and supporting photos.
+        - generic [ref=f13e45]:
+          - heading "Return Approval" [level=3] [ref=f13e46]
+          - paragraph [ref=f13e47]: Once we receive your request, we will assess it and notify you of the approval status. If approved, we will issue return instructions. Return postage is the customer’s responsibility unless the error was ours.
+        - generic [ref=f13e48]:
+          - heading "Refund Processing" [level=3] [ref=f13e49]
+          - paragraph [ref=f13e50]: Approved refunds will be processed to your original payment method within 5–10 business days. For crypto payments, the USD equivalent at the time of refund will be issued (minus any gas or transaction fees).
+        - generic [ref=f13e51]:
+          - heading "Delayed Refunds" [level=3] [ref=f13e52]
+          - paragraph [ref=f13e53]: "If you haven't received your refund after 10 business days:"
+          - list [ref=f13e54]:
+            - listitem [ref=f13e55]: First, check your bank.
+            - listitem [ref=f13e56]: Then contact us at research@lumivex.store for assistance.
+        - generic [ref=f13e57]:
+          - heading "Contact Us" [level=3] [ref=f13e58]
+          - paragraph [ref=f13e59]: "For any refund-related queries, please contact:"
+          - paragraph [ref=f13e60]: "Email: research@lumivex.store — Website: https://lumivex.store"
+  - contentinfo [ref=f13e61]:
+    - generic [ref=f13e62]:
+      - generic [ref=f13e63]:
+        - generic [ref=f13e65]:
+          - paragraph [ref=f13e66]: Navigate
+          - list [ref=f13e67]:
+            - listitem [ref=f13e68]:
+              - button "About Us" [ref=f13e69] [cursor=pointer]
+            - listitem [ref=f13e70]:
+              - link "Shop" [ref=f13e71] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f13e72]:
+              - button "Why Us" [ref=f13e73] [cursor=pointer]
+            - listitem [ref=f13e74]:
+              - button "Contact" [ref=f13e75] [cursor=pointer]
+        - generic [ref=f13e76]:
+          - paragraph [ref=f13e77]: Legal
+          - list [ref=f13e78]:
+            - listitem [ref=f13e79]:
+              - link "Press Release" [ref=f13e80] [cursor=pointer]:
+                - /url: /press-release
+            - listitem [ref=f13e81]:
+              - link "Refund Policy" [ref=f13e82] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f13e83]:
+              - link "Shipping Policy" [ref=f13e84] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f13e85]:
+              - link "Privacy Policy" [ref=f13e86] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f13e87]:
+              - link "Terms of Service" [ref=f13e88] [cursor=pointer]:
+                - /url: /terms-of-service
+      - heading "LUMIVEX" [level=2] [ref=f13e90]
+      - generic [ref=f13e91]:
+        - paragraph [ref=f13e92]: © 2026 Lumivex. All rights reserved.
+        - paragraph [ref=f13e93]: Research use only — not for human consumption
+  - button "Open assistant" [ref=f13e94] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f13e102] [cursor=pointer]

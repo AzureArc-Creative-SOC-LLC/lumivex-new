@@ -51,7 +51,7 @@ export default function About() {
                 className="text-base font-light leading-relaxed text-charcoal/65"
               >
                 Our in-house R&amp;D lab produces research-grade peptide APIs
-                under controlled clean-room conditions — with batch validation,
+                under controlled clean room conditions with batch validation,
                 third-party analysis and a documented chain of custody from
                 synthesis through release.
               </RevealText>

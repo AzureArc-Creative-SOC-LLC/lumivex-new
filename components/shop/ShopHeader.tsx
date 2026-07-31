@@ -23,7 +23,7 @@ export default function ShopHeader() {
 
         <nav className="flex items-center gap-5">
           <Link
-            href="/#products"
+            href="/shop"
             className="link-underline hidden text-[13px] font-medium text-charcoal/80 hover:text-charcoal sm:inline-block"
           >
             Continue shopping
