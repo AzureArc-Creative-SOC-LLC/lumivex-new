@@ -7,13 +7,14 @@ import { scrollToSection } from '@/lib/lenis';
 import Magnetic from '@/components/ui/Magnetic';
 import Logo from '@/components/ui/Logo';
 import CartButton from '@/components/cart/CartButton';
+import AccountMenu from '@/components/ui/AccountMenu';
 import { useAuth } from '@/components/providers/AuthProvider';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState('#home');
   const [menuOpen, setMenuOpen] = useState(false);
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -92,14 +93,7 @@ export default function Navigation() {
           </ul>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              href={user ? '/account/wallet' : '/login'}
-              className={`link-underline text-[13px] font-medium tracking-wide transition-colors duration-500 ${
-                scrolled ? 'text-charcoal/80 hover:text-charcoal' : 'text-ivory/80 hover:text-ivory'
-              }`}
-            >
-              {user ? 'Account' : 'Sign in'}
-            </Link>
+            <AccountMenu dark={scrolled} />
             <CartButton dark={scrolled} />
             <Magnetic strength={0.4} className="inline-block">
               <Link
@@ -213,6 +207,45 @@ export default function Navigation() {
           >
             View Cart
           </Link>
+          {user ? (
+            <>
+              <Link
+                data-touch-target
+                href="/account/orders"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center rounded-full border border-charcoal/15 px-8 py-4 text-sm font-medium text-charcoal transition-colors hover:border-charcoal/40"
+              >
+                My Orders
+              </Link>
+              <Link
+                data-touch-target
+                href="/account/track"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center rounded-full border border-charcoal/15 px-8 py-4 text-sm font-medium text-charcoal transition-colors hover:border-charcoal/40"
+              >
+                Track
+              </Link>
+              <button
+                data-touch-target
+                onClick={() => {
+                  setMenuOpen(false);
+                  logout();
+                }}
+                className="inline-flex items-center rounded-full border border-charcoal/15 px-8 py-4 text-sm font-medium text-charcoal transition-colors hover:border-charcoal/40"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link
+              data-touch-target
+              href="/login"
+              onClick={() => setMenuOpen(false)}
+              className="inline-flex items-center rounded-full border border-charcoal/15 px-8 py-4 text-sm font-medium text-charcoal transition-colors hover:border-charcoal/40"
+            >
+              Sign In
+            </Link>
+          )}
         </div>
       </div>
     </>

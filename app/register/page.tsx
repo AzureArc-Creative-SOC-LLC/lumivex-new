@@ -16,7 +16,7 @@ export default function RegisterPage() {
 function RegisterForm() {
   const router = useRouter();
   const params = useSearchParams();
-  const next = params.get('next') || '/account/wallet';
+  const next = params.get('next') || '/';
   const { register, user } = useAuth();
   const [form, setForm] = useState({
     name: '',

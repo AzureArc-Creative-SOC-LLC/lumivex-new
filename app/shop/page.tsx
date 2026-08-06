@@ -40,6 +40,12 @@ export default function ShopPage() {
         {/* Catalogue */}
         <section className="py-14 md:py-20">
           <div className="container-wide">
+            <div className="mb-10 md:mb-14">
+              <span className="eyebrow">The Catalogue</span>
+              <h1 className="mt-4 text-section font-extralight text-charcoal">
+                Research Compounds
+              </h1>
+            </div>
             <ShopGrid />
           </div>
         </section>

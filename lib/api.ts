@@ -10,6 +10,16 @@ export const API_BASE =
   process.env.NEXT_PUBLIC_MICROSERVICES_URL ?? 'https://www.microservices.tech';
   // process.env.NEXT_PUBLIC_MICROSERVICES_URL ?? 'http://localhost:5003';
 
+/**
+ * payment-verification-service — OCR-verifies a payment screenshot against
+ * an order. Defaults to the same gateway domain as API_BASE (the service is
+ * proxied under it); override with NEXT_PUBLIC_PAYMENT_VERIFICATION_URL if
+ * it's hosted separately (local default is http://localhost:5004 per the
+ * service's own docs).
+ */
+export const PAYMENT_VERIFICATION_API_BASE =
+  process.env.NEXT_PUBLIC_PAYMENT_VERIFICATION_URL ?? API_BASE;
+
 const TOKEN_KEY = 'lumivex-auth-token';
 
 export class ApiError extends Error {
@@ -49,10 +59,12 @@ type RequestOptions = {
   /** Multipart body — overrides JSON serialisation. */
   formData?: FormData;
   signal?: AbortSignal;
+  /** Override the default API_BASE (e.g. for a separately-hosted microservice). */
+  base?: string;
 };
 
 async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
-  const { method = 'GET', body, auth = false, formData, signal } = opts;
+  const { method = 'GET', body, auth = false, formData, signal, base = API_BASE } = opts;
   const headers: Record<string, string> = {};
   if (!formData && body !== undefined) headers['Content-Type'] = 'application/json';
   if (auth) {
@@ -60,7 +72,7 @@ async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
     if (token) headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const res = await fetch(`${API_BASE}${path}`, {
+  const res = await fetch(`${base}${path}`, {
     method,
     headers,
     body: formData ?? (body !== undefined ? JSON.stringify(body) : undefined),
@@ -334,6 +346,52 @@ export const paymentCapture = {
       verification_error?: string;
     }>('/api/payment-capture/upload', { method: 'POST', formData: fd });
   },
+};
+
+// ──────────────────────────────────────────────────────────────────────────────
+// Payment verification (payment-verification-service — OCR screenshot check)
+// ──────────────────────────────────────────────────────────────────────────────
+
+export type PaymentVerdict = {
+  decision: 'approved' | 'rejected' | string;
+  probability: number;
+  reasons: string[];
+  extracted: {
+    amount_candidates: number[];
+    best_amount: number | null;
+    expected_total: number;
+    payee_expected: string;
+    sort_code_expected: string;
+    account_number_expected: string;
+    ocr_avg_conf: number;
+  };
+};
+
+export type VerifyPaymentResponse = {
+  order: {
+    id: number;
+    order_number: string;
+    customer_email: string;
+    total: number;
+  };
+  screenshot: { filename: string; path: string };
+  verdict: PaymentVerdict;
+};
+
+export const paymentVerification = {
+  health: () =>
+    request<{ ok: boolean; service: string; db: string }>(
+      '/api/payment-verification/health',
+      { base: PAYMENT_VERIFICATION_API_BASE }
+    ),
+
+  /** OCR-verifies an already-uploaded screenshot against the order total/payee. */
+  verify: (orderNumber: string, screenshotFilename: string) =>
+    request<VerifyPaymentResponse>('/api/payment-verification/verify', {
+      method: 'POST',
+      body: { order_number: orderNumber, screenshot_filename: screenshotFilename },
+      base: PAYMENT_VERIFICATION_API_BASE,
+    }),
 };
 
 // ──────────────────────────────────────────────────────────────────────────────

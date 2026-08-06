@@ -58,7 +58,7 @@ export default function Collage() {
             />
           </div>
 
-          <div className="group col-span-5 overflow-hidden rounded-[3px] md:col-span-4 md:col-start-2">
+          <div className="group col-span-5 overflow-hidden rounded-[3px] md:col-span-4 md:col-start-1">
             <CurtainImage
               src={img(IMAGES.collage3, 900)}
               alt="Pipetting research compounds in the lab"
@@ -69,11 +69,11 @@ export default function Collage() {
             />
           </div>
 
-          <div className="col-span-12 flex items-center md:col-span-3">
+          <div className="col-span-12 flex items-center md:col-span-5 md:col-start-8">
             <RevealText
               as="p"
               split="words"
-              className="text-sm font-light leading-relaxed text-charcoal/55"
+              className="text-base font-light leading-relaxed text-charcoal/60 md:text-lg"
             >
               Manufactured in our in-house synthesis facility  every compound
               produced under controlled conditions to meet stringent R&amp;D

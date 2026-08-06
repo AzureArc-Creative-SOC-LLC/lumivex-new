@@ -16,7 +16,7 @@ export default function LoginPage() {
 function LoginForm() {
   const router = useRouter();
   const params = useSearchParams();
-  const next = params.get('next') || '/account/wallet';
+  const next = params.get('next') || '/';
   const { login, user } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -49,7 +49,7 @@ function LoginForm() {
           Sign in
         </h1>
         <p className="mt-3 text-sm font-light text-charcoal/55">
-          Access your wallet, affiliate dashboard, and order history.
+          Sign in to track your orders.
         </p>
 
         <form onSubmit={onSubmit} className="mt-8 space-y-5">
